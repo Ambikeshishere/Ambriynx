@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ambriyx — Business Automation & Data Systems</title>
   <meta name="description" content="Ambriyx helps businesses automate reporting, workflows, dashboards, and repetitive manual work using modern automation systems." />
-  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#080808" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ========== RESET & BASE ========== */
+    /* ============================================
+       RESET & BASE
+    ============================================ */
     *,
     *::before,
     *::after {
@@ -26,6 +28,8 @@
       --cyan: #00e5e5;
       --cyan-dim: rgba(0, 229, 229, 0.08);
       --cyan-glow: rgba(0, 229, 229, 0.25);
+      --purple: #a78bfa;
+      --blue: #60a5fa;
       --bg: #080808;
       --bg-card: rgba(255, 255, 255, 0.03);
       --border: rgba(255, 255, 255, 0.08);
@@ -47,15 +51,8 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
 
     .container {
       width: 92%;
@@ -68,17 +65,11 @@
       position: relative;
     }
 
-    /* ========== TYPOGRAPHY ========== */
-    h1, h2, h3, h4 {
-      line-height: 1.15;
-      font-weight: 800;
-    }
-
-    p {
-      color: var(--text-dim);
-      line-height: 1.7;
-      font-size: 17px;
-    }
+    /* ============================================
+       TYPOGRAPHY
+    ============================================ */
+    h1, h2, h3, h4 { line-height: 1.15; font-weight: 800; }
+    p { color: var(--text-dim); line-height: 1.7; font-size: 17px; }
 
     .section-tag {
       display: inline-flex;
@@ -98,8 +89,7 @@
 
     .section-tag::before {
       content: '';
-      width: 6px;
-      height: 6px;
+      width: 6px; height: 6px;
       border-radius: 50%;
       background: var(--cyan);
       animation: pulse-dot 2s ease-in-out infinite;
@@ -121,7 +111,9 @@
       color: var(--text-dim);
     }
 
-    /* ========== GLOW EFFECTS ========== */
+    /* ============================================
+       GLOW ORBS
+    ============================================ */
     .glow-orb {
       position: absolute;
       border-radius: 50%;
@@ -129,32 +121,34 @@
       pointer-events: none;
       z-index: 0;
     }
-
     .glow-orb--cyan {
-      width: 500px;
-      height: 500px;
+      width: 500px; height: 500px;
       background: rgba(0, 229, 229, 0.07);
-      top: -200px;
-      right: -100px;
+      top: -200px; right: -100px;
     }
-
     .glow-orb--purple {
-      width: 400px;
-      height: 400px;
-      background: rgba(120, 80, 255, 0.06);
-      bottom: -150px;
-      left: -150px;
+      width: 400px; height: 400px;
+      background: rgba(167, 139, 250, 0.06);
+      bottom: -150px; left: -150px;
     }
 
-    .glow-orb--blue {
-      width: 350px;
-      height: 350px;
-      background: rgba(0, 120, 255, 0.06);
-      top: 50%;
-      left: -100px;
+    /* ============================================
+       CANVAS PARTICLE NETWORK
+    ============================================ */
+    #networkCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.5;
     }
 
-    /* ========== NAVBAR ========== */
+    /* ============================================
+       NAVBAR
+    ============================================ */
     .navbar {
       position: fixed;
       width: 100%;
@@ -167,10 +161,7 @@
       border-bottom: 1px solid var(--border);
       transition: 0.3s;
     }
-
-    .navbar.scrolled {
-      background: rgba(8, 8, 8, 0.92);
-    }
+    .navbar.scrolled { background: rgba(8, 8, 8, 0.95); }
 
     .nav-container {
       display: flex;
@@ -184,12 +175,16 @@
       align-items: center;
       gap: 14px;
     }
-
     .logo img {
-      width: 48px;
-      height: 48px;
+      width: 48px; height: 48px;
       border-radius: 12px;
       object-fit: contain;
+      animation: logo-glow 3s ease-in-out infinite;
+    }
+
+    @keyframes logo-glow {
+      0%, 100% { filter: drop-shadow(0 0 4px var(--cyan-glow)); }
+      50% { filter: drop-shadow(0 0 14px var(--cyan-glow)); }
     }
 
     .logo-text h2 {
@@ -197,7 +192,6 @@
       letter-spacing: 3px;
       font-weight: 800;
     }
-
     .logo-text span {
       font-size: 11px;
       color: var(--text-dim);
@@ -210,7 +204,6 @@
       align-items: center;
       gap: 32px;
     }
-
     .nav-links a {
       font-size: 14px;
       font-weight: 500;
@@ -218,7 +211,6 @@
       transition: 0.3s;
       position: relative;
     }
-
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -229,13 +221,8 @@
       background: var(--cyan);
       transition: 0.3s;
     }
-
-    .nav-links a:hover {
-      color: var(--text);
-    }
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { width: 100%; }
 
     .nav-cta {
       background: var(--cyan) !important;
@@ -246,10 +233,7 @@
       font-size: 14px !important;
       transition: 0.3s !important;
     }
-
-    .nav-cta::after {
-      display: none !important;
-    }
+    .nav-cta::after { display: none !important; }
     .nav-cta:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 30px var(--cyan-glow);
@@ -265,16 +249,16 @@
       border: none;
       padding: 4px;
     }
-
     .menu-toggle span {
-      width: 26px;
-      height: 2px;
+      width: 26px; height: 2px;
       background: white;
       border-radius: 2px;
       transition: 0.3s;
     }
 
-    /* ========== HERO ========== */
+    /* ============================================
+       HERO
+    ============================================ */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -288,8 +272,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
       background-size: 60px 60px;
       mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black, transparent 70%);
       -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, black, transparent 70%);
@@ -315,10 +299,8 @@
       margin-bottom: 28px;
       animation: fadeUp 0.6s ease-out;
     }
-
     .hero-badge .dot {
-      width: 6px;
-      height: 6px;
+      width: 6px; height: 6px;
       border-radius: 50%;
       background: var(--cyan);
       animation: pulse-dot 2s ease-in-out infinite;
@@ -330,12 +312,28 @@
       line-height: 1.08;
       animation: fadeUp 0.6s ease-out 0.1s both;
     }
-
     .hero h1 .gradient-text {
-      background: linear-gradient(135deg, var(--cyan) 0%, #60a5fa 50%, #a78bfa 100%);
+      background: linear-gradient(135deg, var(--cyan) 0%, var(--blue) 50%, var(--purple) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      background-size: 200% 200%;
+      animation: gradient-shift 4s ease-in-out infinite;
+    }
+
+    @keyframes gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* Typewriter cursor */
+    #typewriter {
+      border-right: 3px solid var(--cyan);
+      animation: blink-cursor 0.75s step-end infinite;
+      padding-right: 4px;
+    }
+    @keyframes blink-cursor {
+      50% { border-color: transparent; }
     }
 
     .hero p {
@@ -365,29 +363,26 @@
       cursor: pointer;
       transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
-
     .btn-primary {
       background: var(--cyan);
       color: #000;
     }
-
     .btn-primary:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 40px var(--cyan-glow);
     }
-
     .btn-secondary {
       background: transparent;
       color: var(--text);
       border: 1px solid var(--border);
     }
-
     .btn-secondary:hover {
       border-color: rgba(255, 255, 255, 0.25);
       transform: translateY(-4px);
       background: rgba(255, 255, 255, 0.04);
     }
 
+    /* Animated stats */
     .hero-stats {
       display: flex;
       gap: 48px;
@@ -396,21 +391,14 @@
       border-top: 1px solid var(--border);
       animation: fadeUp 0.6s ease-out 0.4s both;
     }
-
     .hero-stat h3 {
       font-size: 32px;
       font-weight: 800;
-      color: var(--text);
     }
-
-    .hero-stat h3 span {
-      color: var(--cyan);
-    }
-
+    .hero-stat h3 .num-suffix { color: var(--cyan); }
     .hero-stat p {
       font-size: 14px;
       margin-top: 4px;
-      color: var(--text-dim);
     }
 
     @keyframes fadeUp {
@@ -418,7 +406,9 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ========== SERVICES ========== */
+    /* ============================================
+       SERVICES
+    ============================================ */
     .services {
       background: rgba(255, 255, 255, 0.015);
       border-top: 1px solid var(--border);
@@ -440,33 +430,46 @@
       transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
       position: relative;
       overflow: hidden;
+      cursor: default;
     }
 
+    /* Animated gradient border on hover */
     .service-card::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      background: conic-gradient(
+        transparent, var(--cyan), transparent, var(--purple), transparent
+      );
+      border-radius: calc(var(--radius-lg) + 2px);
+      z-index: -1;
       opacity: 0;
-      transition: 0.4s;
+      transition: opacity 0.5s;
+      animation: spin-border 4s linear infinite;
     }
 
+    @keyframes spin-border {
+      to { transform: rotate(360deg); }
+    }
+
+    .service-card:hover::before { opacity: 1; }
     .service-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(0, 229, 229, 0.3);
-      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-10px) scale(1.02);
     }
 
-    .service-card:hover::before {
-      opacity: 1;
+    /* Shimmer overlay */
+    .service-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+      transition: 0.6s;
     }
+    .service-card:hover::after { left: 150%; }
 
     .service-icon {
-      width: 56px;
-      height: 56px;
+      width: 56px; height: 56px;
       border-radius: 16px;
       background: var(--cyan-dim);
       color: var(--cyan);
@@ -475,24 +478,36 @@
       justify-content: center;
       font-size: 24px;
       margin-bottom: 22px;
-      transition: 0.3s;
+      transition: 0.4s;
+      position: relative;
     }
 
+    .service-icon::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 19px;
+      border: 1px solid transparent;
+      background: conic-gradient(var(--cyan), var(--purple), var(--cyan)) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .service-card:hover .service-icon::after { opacity: 1; }
     .service-card:hover .service-icon {
       background: rgba(0, 229, 229, 0.15);
-      transform: scale(1.05);
+      transform: scale(1.08) rotate(-3deg);
     }
 
-    .service-card h3 {
-      font-size: 20px;
-      margin-bottom: 14px;
-    }
+    .service-card h3 { font-size: 20px; margin-bottom: 14px; }
+    .service-card p { font-size: 15px; }
 
-    .service-card p {
-      font-size: 15px;
-    }
-
-    /* ========== ABOUT / WHY US ========== */
+    /* ============================================
+       ABOUT
+    ============================================ */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -501,11 +516,7 @@
       margin-top: 20px;
     }
 
-    .about-visual {
-      position: relative;
-    }
-
-    .about-visual .code-block {
+    .code-block {
       background: #0d0d0d;
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -515,13 +526,25 @@
       line-height: 1.8;
       color: var(--text-dim);
       overflow-x: auto;
+      position: relative;
     }
 
+    /* Terminal dot animation */
+    .code-block::before {
+      content: '● ● ●';
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #555;
+    }
     .code-block .keyword { color: #c792ea; }
     .code-block .func    { color: #82aaff; }
     .code-block .string  { color: #c3e88d; }
     .code-block .cyan    { color: var(--cyan); }
     .code-block .comment { color: #546e7a; }
+    .code-block .line { opacity: 0; display: block; }
 
     .about-features {
       display: grid;
@@ -534,11 +557,20 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition: 0.3s;
+      cursor: default;
+    }
+    .about-feature:hover {
+      border-color: var(--border);
+      background: var(--bg-card);
+      transform: translateX(6px);
     }
 
     .about-feature .check {
-      width: 24px;
-      height: 24px;
+      width: 28px; height: 28px;
       border-radius: 50%;
       background: var(--cyan-dim);
       color: var(--cyan);
@@ -548,19 +580,19 @@
       flex-shrink: 0;
       font-size: 13px;
       margin-top: 2px;
+      transition: 0.3s;
+    }
+    .about-feature:hover .check {
+      background: rgba(0, 229, 229, 0.2);
+      transform: scale(1.1);
     }
 
-    .about-feature h4 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
+    .about-feature h4 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+    .about-feature p { font-size: 14px; }
 
-    .about-feature p {
-      font-size: 14px;
-    }
-
-    /* ========== HOW IT WORKS ========== */
+    /* ============================================
+       HOW IT WORKS — PIPELINE
+    ============================================ */
     .process {
       background: rgba(255, 255, 255, 0.015);
       border-top: 1px solid var(--border);
@@ -575,26 +607,48 @@
       position: relative;
     }
 
+    /* Animated pipeline connector */
+    .process-pipeline {
+      position: absolute;
+      top: 28px;
+      left: calc(12.5% + 28px);
+      width: calc(75% - 56px);
+      height: 2px;
+      background: rgba(255, 255, 255, 0.06);
+      z-index: 0;
+    }
+    .process-pipeline-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--cyan), var(--purple));
+      transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+      position: relative;
+    }
+    .process-pipeline-fill.animate { width: 100%; }
+
+    /* Glowing dot running along pipeline */
+    .pipeline-dot {
+      position: absolute;
+      top: -4px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 20px var(--cyan);
+      left: 0;
+      transition: left 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .pipeline-dot.animate { left: calc(100% - 10px); }
+
     .process-step {
       text-align: center;
       padding: 36px 20px;
       position: relative;
-    }
-
-    .process-step:not(:last-child)::after {
-      content: '→';
-      position: absolute;
-      right: -20px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 24px;
-      color: var(--cyan);
-      opacity: 0.4;
+      z-index: 1;
+      cursor: default;
     }
 
     .step-number {
-      width: 56px;
-      height: 56px;
+      width: 56px; height: 56px;
       border-radius: 50%;
       background: var(--cyan-dim);
       border: 1px solid rgba(0, 229, 229, 0.2);
@@ -605,18 +659,37 @@
       margin: 0 auto 20px;
       font-size: 20px;
       font-weight: 800;
+      position: relative;
+      transition: 0.4s;
     }
 
-    .process-step h3 {
-      font-size: 18px;
-      margin-bottom: 12px;
+    /* Pulsing ring around step number */
+    .step-number::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 229, 229, 0.15);
+      animation: ring-pulse 2s ease-out infinite;
     }
 
-    .process-step p {
-      font-size: 14px;
+    @keyframes ring-pulse {
+      0% { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(1.4); opacity: 0; }
     }
 
-    /* ========== TESTIMONIALS ========== */
+    .process-step:hover .step-number {
+      background: rgba(0, 229, 229, 0.18);
+      transform: scale(1.1);
+      box-shadow: 0 0 30px var(--cyan-glow);
+    }
+
+    .process-step h3 { font-size: 18px; margin-bottom: 12px; }
+    .process-step p { font-size: 14px; }
+
+    /* ============================================
+       TESTIMONIALS
+    ============================================ */
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -629,21 +702,21 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 32px;
-      transition: 0.3s;
+      transition: 0.4s;
+      cursor: default;
     }
-
     .testimonial-card:hover {
-      border-color: rgba(0, 229, 229, 0.2);
-      transform: translateY(-4px);
+      border-color: rgba(0, 229, 229, 0.25);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     }
 
     .testimonial-stars {
       color: #fbbf24;
       font-size: 16px;
       margin-bottom: 16px;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
     }
-
     .testimonial-card blockquote {
       font-size: 15px;
       line-height: 1.7;
@@ -651,18 +724,15 @@
       font-style: italic;
       margin-bottom: 20px;
     }
-
     .testimonial-author {
       display: flex;
       align-items: center;
       gap: 12px;
     }
-
     .testimonial-avatar {
-      width: 42px;
-      height: 42px;
+      width: 42px; height: 42px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--cyan), #60a5fa);
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -670,27 +740,20 @@
       font-size: 16px;
       color: #000;
     }
+    .testimonial-author h4 { font-size: 15px; }
+    .testimonial-author span { font-size: 13px; color: var(--text-dim); }
 
-    .testimonial-author h4 {
-      font-size: 15px;
-    }
-
-    .testimonial-author span {
-      font-size: 13px;
-      color: var(--text-dim);
-    }
-
-    /* ========== FAQ ========== */
+    /* ============================================
+       FAQ
+    ============================================ */
     .faq-list {
       max-width: 760px;
       margin: 50px auto 0;
     }
-
     .faq-item {
       border-bottom: 1px solid var(--border);
       padding: 20px 0;
     }
-
     .faq-question {
       display: flex;
       justify-content: space-between;
@@ -704,35 +767,36 @@
       width: 100%;
       text-align: left;
       padding: 4px 0;
-    }
-
-    .faq-question .icon {
-      font-size: 20px;
       transition: 0.3s;
+    }
+    .faq-question:hover { color: var(--cyan); }
+    .faq-question .icon {
+      font-size: 22px;
+      transition: 0.4s;
       color: var(--cyan);
+      flex-shrink: 0;
+      margin-left: 16px;
     }
-
-    .faq-item.open .faq-question .icon {
-      transform: rotate(45deg);
-    }
+    .faq-item.open .faq-question .icon { transform: rotate(45deg); }
 
     .faq-answer {
       max-height: 0;
       overflow: hidden;
-      transition: 0.35s ease;
+      transition: 0.4s ease;
       color: var(--text-dim);
       font-size: 15px;
       line-height: 1.7;
     }
-
     .faq-item.open .faq-answer {
       max-height: 200px;
       padding-top: 16px;
     }
 
-    /* ========== CONTACT ========== */
+    /* ============================================
+       CONTACT
+    ============================================ */
     .contact-section {
-      background: linear-gradient(160deg, rgba(0, 229, 229, 0.04), rgba(120, 80, 255, 0.04));
+      background: linear-gradient(160deg, rgba(0, 229, 229, 0.04), rgba(167, 139, 250, 0.04));
       border-top: 1px solid var(--border);
     }
 
@@ -744,14 +808,8 @@
       align-items: start;
     }
 
-    .contact-info h3 {
-      font-size: 22px;
-      margin-bottom: 16px;
-    }
-
-    .contact-info p {
-      margin-bottom: 24px;
-    }
+    .contact-info h3 { font-size: 22px; margin-bottom: 16px; }
+    .contact-info p { margin-bottom: 24px; }
 
     .contact-info-item {
       display: flex;
@@ -760,11 +818,17 @@
       margin-bottom: 16px;
       font-size: 15px;
       color: var(--text-dim);
+      transition: 0.3s;
+      padding: 8px 12px;
+      border-radius: 12px;
+      cursor: default;
     }
-
+    .contact-info-item:hover {
+      background: var(--bg-card);
+      transform: translateX(6px);
+    }
     .contact-info-item .icon-box {
-      width: 40px;
-      height: 40px;
+      width: 40px; height: 40px;
       border-radius: 12px;
       background: var(--cyan-dim);
       color: var(--cyan);
@@ -779,7 +843,6 @@
       flex-direction: column;
       gap: 16px;
     }
-
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -799,39 +862,30 @@
       outline: none;
       transition: 0.3s;
     }
-
     .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: #555;
-    }
+    .contact-form textarea::placeholder { color: #555; }
 
     .contact-form input:focus,
     .contact-form select:focus,
     .contact-form textarea:focus {
       border-color: var(--cyan);
       background: rgba(0, 229, 229, 0.04);
+      box-shadow: 0 0 0 3px rgba(0, 229, 229, 0.08);
     }
 
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
+    .contact-form textarea { resize: vertical; min-height: 120px; }
 
-    #status {
-      margin-top: 12px;
-      font-size: 15px;
-      font-weight: 600;
-    }
-
+    #status { margin-top: 12px; font-size: 15px; font-weight: 600; }
     #status.success { color: #4ade80; }
     #status.error   { color: #f87171; }
 
-    /* ========== FOOTER ========== */
+    /* ============================================
+       FOOTER
+    ============================================ */
     footer {
       border-top: 1px solid var(--border);
       padding: 40px 0;
     }
-
     .footer-grid {
       display: flex;
       justify-content: space-between;
@@ -839,25 +893,15 @@
       flex-wrap: wrap;
       gap: 20px;
     }
-
-    .footer-brand h3 {
-      font-size: 20px;
-      letter-spacing: 2px;
-    }
-
-    .footer-brand span {
-      font-size: 13px;
-      color: var(--text-dim);
-    }
+    .footer-brand h3 { font-size: 20px; letter-spacing: 2px; }
+    .footer-brand span { font-size: 13px; color: var(--text-dim); }
 
     .footer-social {
       display: flex;
       gap: 16px;
     }
-
     .footer-social a {
-      width: 40px;
-      height: 40px;
+      width: 40px; height: 40px;
       border-radius: 12px;
       border: 1px solid var(--border);
       display: flex;
@@ -867,11 +911,11 @@
       font-size: 16px;
       transition: 0.3s;
     }
-
     .footer-social a:hover {
       border-color: var(--cyan);
       color: var(--cyan);
       transform: translateY(-3px);
+      box-shadow: 0 4px 20px var(--cyan-glow);
     }
 
     .footer-bottom {
@@ -887,13 +931,14 @@
       color: var(--text-dim);
     }
 
-    /* ========== WHATSAPP FAB ========== */
+    /* ============================================
+       WHATSAPP FAB
+    ============================================ */
     .whatsapp-fab {
       position: fixed;
       right: 24px;
       bottom: 24px;
-      width: 60px;
-      height: 60px;
+      width: 60px; height: 60px;
       border-radius: 50%;
       background: #25D366;
       display: flex;
@@ -907,24 +952,23 @@
       transition: 0.3s;
       animation: float 3s ease-in-out infinite;
     }
-
     .whatsapp-fab:hover {
       transform: scale(1.1);
       box-shadow: 0 8px 40px rgba(37, 211, 102, 0.55);
     }
-
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50%      { transform: translateY(-8px); }
     }
 
-    /* ========== BACK TO TOP ========== */
+    /* ============================================
+       BACK TO TOP
+    ============================================ */
     .back-to-top {
       position: fixed;
       right: 24px;
       bottom: 100px;
-      width: 44px;
-      height: 44px;
+      width: 44px; height: 44px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid var(--border);
@@ -939,50 +983,69 @@
       pointer-events: none;
       transition: 0.3s;
     }
-
-    .back-to-top.show {
-      opacity: 1;
-      pointer-events: all;
-    }
-
+    .back-to-top.show { opacity: 1; pointer-events: all; }
     .back-to-top:hover {
       background: var(--cyan);
       color: #000;
       border-color: var(--cyan);
+      transform: translateY(-3px);
     }
 
-    /* ========== REVEAL ANIMATIONS ========== */
+    /* ============================================
+       SCROLL REVEAL
+    ============================================ */
     .reveal {
       opacity: 0;
-      transform: translateY(40px);
-      transition: 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      transform: translateY(50px);
+      transition: 0.8s cubic-bezier(0.22, 1, 0.36, 1);
     }
-
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-d1 { transition-delay: 0.1s; }
+    .reveal-d2 { transition-delay: 0.2s; }
+    .reveal-d3 { transition-delay: 0.3s; }
+    .reveal-d4 { transition-delay: 0.4s; }
+    .reveal-d5 { transition-delay: 0.5s; }
 
-    /* ========== RESPONSIVE ========== */
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-scale.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-60px);
+      transition: 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
     @media (max-width: 968px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .process-step:not(:last-child)::after {
-        display: none;
-      }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .process-pipeline { display: none; }
     }
 
     @media (max-width: 768px) {
@@ -990,10 +1053,8 @@
 
       .nav-links {
         position: fixed;
-        top: 0;
-        right: -100%;
-        width: 280px;
-        height: 100vh;
+        top: 0; right: -100%;
+        width: 280px; height: 100vh;
         background: rgba(8, 8, 8, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
@@ -1003,56 +1064,27 @@
         transition: 0.4s;
         border-left: 1px solid var(--border);
       }
+      .nav-links.open { right: 0; }
+      .menu-toggle { display: flex; }
 
-      .nav-links.open {
-        right: 0;
-      }
-
-      .menu-toggle {
-        display: flex;
-      }
-
-      .hero-stats {
-        flex-direction: column;
-        gap: 24px;
-      }
-
-      .about-features {
-        grid-template-columns: 1fr;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
+      .hero-stats { flex-direction: column; gap: 24px; }
+      .about-features { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { flex-direction: column; text-align: center; }
+      .footer-bottom { flex-direction: column; text-align: center; }
     }
 
     @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .btn {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
+      .hero h1 { font-size: 34px; }
+      .btn { width: 100%; justify-content: center; }
+      .hero-actions { flex-direction: column; }
     }
   </style>
 </head>
 <body>
+
+  <!-- ===== CANVAS PARTICLE NETWORK BACKGROUND ===== -->
+  <canvas id="networkCanvas"></canvas>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
@@ -1092,13 +1124,13 @@
 
         <h1>
           We Automate<br />
-          <span class="gradient-text">Business Operations</span>
+          <span class="gradient-text" id="typewriter"></span>
         </h1>
 
         <p>
           We help businesses automate reporting, workflows, dashboards,
           operational tasks, and repetitive manual work using modern
-          automation systems — so you can focus on growth.
+          automation systems &mdash; so you can focus on growth.
         </p>
 
         <div class="hero-actions">
@@ -1112,19 +1144,19 @@
 
         <div class="hero-stats">
           <div class="hero-stat">
-            <h3>50<span>+</span></h3>
+            <h3><span class="counter" data-target="50">0</span><span class="num-suffix">+</span></h3>
             <p>Projects Delivered</p>
           </div>
           <div class="hero-stat">
-            <h3>98<span>%</span></h3>
+            <h3><span class="counter" data-target="98">0</span><span class="num-suffix">%</span></h3>
             <p>Client Satisfaction</p>
           </div>
           <div class="hero-stat">
-            <h3>24<span>/7</span></h3>
+            <h3><span class="num-suffix">24/7</span></h3>
             <p>Support Available</p>
           </div>
           <div class="hero-stat">
-            <h3>4.9<span>★</span></h3>
+            <h3><span class="counter" data-target="49">0</span><span class="num-suffix">★</span></h3>
             <p>Average Rating</p>
           </div>
         </div>
@@ -1136,13 +1168,13 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-tag reveal">What We Do</div>
-      <h2 class="section-title reveal reveal-delay-1">Business Automation Solutions</h2>
-      <p class="section-sub reveal reveal-delay-2">
+      <h2 class="section-title reveal reveal-d1">Business Automation Solutions</h2>
+      <p class="section-sub reveal reveal-d2">
         End-to-end automation tailored to your business needs.
       </p>
 
       <div class="services-grid">
-        <div class="service-card reveal reveal-delay-1">
+        <div class="service-card reveal-scale reveal-d1">
           <div class="service-icon">&#9632;</div>
           <h3>Dashboard Automation</h3>
           <p>
@@ -1151,7 +1183,7 @@
           </p>
         </div>
 
-        <div class="service-card reveal reveal-delay-2">
+        <div class="service-card reveal-scale reveal-d2">
           <div class="service-icon">&#9881;</div>
           <h3>Business Process Automation</h3>
           <p>
@@ -1160,7 +1192,7 @@
           </p>
         </div>
 
-        <div class="service-card reveal reveal-delay-3">
+        <div class="service-card reveal-scale reveal-d3">
           <div class="service-icon">&#9878;</div>
           <h3>Data Automation</h3>
           <p>
@@ -1169,7 +1201,7 @@
           </p>
         </div>
 
-        <div class="service-card reveal reveal-delay-4">
+        <div class="service-card reveal-scale reveal-d4">
           <div class="service-icon">&#9733;</div>
           <h3>Custom Internal Tools</h3>
           <p>
@@ -1185,26 +1217,27 @@
   <section id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-visual reveal">
-          <div class="code-block">
-            <span class="comment">// Ambriyx automation engine</span><br />
-            <span class="keyword">async</span> <span class="func">automate</span>(<span class="string">business</span>) {<br />
-            &nbsp;&nbsp;<span class="keyword">const</span> <span class="cyan">workflow</span> = <span class="keyword">await</span> <span class="func">analyze</span>(business);<br />
-            &nbsp;&nbsp;<span class="keyword">const</span> <span class="cyan">solution</span> = <span class="func">design</span>(workflow);<br />
-            &nbsp;&nbsp;<span class="keyword">return</span> <span class="func">deploy</span>(solution);<br />
-            }<br /><br />
-            <span class="comment">// Result: 10x efficiency ↑</span><br />
-            <span class="func">console</span>.<span class="func">log</span>(<span class="string">"Business runs itself 🚀"</span>);
+        <div class="reveal-left">
+          <div class="code-block" id="codeBlock">
+            <span class="line"><span class="comment">// Ambriyx automation engine</span></span>
+            <span class="line"><span class="keyword">async</span> <span class="func">automate</span>(<span class="string">business</span>) {</span>
+            <span class="line">&nbsp;&nbsp;<span class="keyword">const</span> <span class="cyan">workflow</span> = <span class="keyword">await</span> <span class="func">analyze</span>(business);</span>
+            <span class="line">&nbsp;&nbsp;<span class="keyword">const</span> <span class="cyan">solution</span> = <span class="func">design</span>(workflow);</span>
+            <span class="line">&nbsp;&nbsp;<span class="keyword">return</span> <span class="func">deploy</span>(solution);</span>
+            <span class="line">}</span>
+            <span class="line">&nbsp;</span>
+            <span class="line"><span class="comment">// Result: 10x efficiency ↑</span></span>
+            <span class="line"><span class="func">console</span>.<span class="func">log</span>(<span class="string">"Business runs itself 🚀"</span>);</span>
           </div>
         </div>
 
-        <div class="reveal reveal-delay-1">
+        <div class="reveal-right reveal-d1">
           <div class="section-tag">Why Ambriyx</div>
           <h2 class="section-title">We Build Systems That Run Themselves</h2>
           <p>
             You focus on growing your business. We build the automation
             infrastructure that handles the repetitive work. From data
-            pipelines to client dashboards — we make it happen.
+            pipelines to client dashboards &mdash; we make it happen.
           </p>
 
           <div class="about-features">
@@ -1226,7 +1259,7 @@
               <div class="check">&#10003;</div>
               <div>
                 <h4>No-Code Friendly</h4>
-                <p>You can manage it — no dev skills needed</p>
+                <p>You can manage it &mdash; no dev skills needed</p>
               </div>
             </div>
             <div class="about-feature">
@@ -1246,31 +1279,37 @@
   <section class="process" id="process">
     <div class="container">
       <div class="section-tag reveal">The Process</div>
-      <h2 class="section-title reveal reveal-delay-1">How It Works</h2>
-      <p class="section-sub reveal reveal-delay-2">
+      <h2 class="section-title reveal reveal-d1">How It Works</h2>
+      <p class="section-sub reveal reveal-d2">
         From discovery to deployment in four simple steps.
       </p>
 
-      <div class="process-steps">
-        <div class="process-step reveal reveal-delay-1">
+      <div class="process-steps" id="processSteps">
+        <!-- Animated pipeline connector -->
+        <div class="process-pipeline">
+          <div class="process-pipeline-fill" id="pipelineFill"></div>
+          <div class="pipeline-dot" id="pipelineDot"></div>
+        </div>
+
+        <div class="process-step reveal reveal-d1">
           <div class="step-number">1</div>
           <h3>Discovery Call</h3>
           <p>We understand your business, pain points, and automation goals.</p>
         </div>
 
-        <div class="process-step reveal reveal-delay-2">
+        <div class="process-step reveal reveal-d2">
           <div class="step-number">2</div>
           <h3>Solution Design</h3>
           <p>We architect a custom automation blueprint for your workflow.</p>
         </div>
 
-        <div class="process-step reveal reveal-delay-3">
+        <div class="process-step reveal reveal-d3">
           <div class="step-number">3</div>
           <h3>Build &amp; Test</h3>
           <p>We build, test, and iterate until everything runs perfectly.</p>
         </div>
 
-        <div class="process-step reveal reveal-delay-4">
+        <div class="process-step reveal reveal-d4">
           <div class="step-number">4</div>
           <h3>Deploy &amp; Support</h3>
           <p>We deploy and hand over with training and ongoing support.</p>
@@ -1283,13 +1322,13 @@
   <section id="testimonials">
     <div class="container">
       <div class="section-tag reveal">Testimonials</div>
-      <h2 class="section-title reveal reveal-delay-1">What Our Clients Say</h2>
-      <p class="section-sub reveal reveal-delay-2">
+      <h2 class="section-title reveal reveal-d1">What Our Clients Say</h2>
+      <p class="section-sub reveal reveal-d2">
         Real feedback from businesses we've helped automate.
       </p>
 
       <div class="testimonials-grid">
-        <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-card reveal-scale reveal-d1">
           <div class="testimonial-stars">★★★★★</div>
           <blockquote>"Ambriyx completely transformed our reporting system. What used to take 3 days now takes 15 minutes."</blockquote>
           <div class="testimonial-author">
@@ -1301,7 +1340,7 @@
           </div>
         </div>
 
-        <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-card reveal-scale reveal-d2">
           <div class="testimonial-stars">★★★★★</div>
           <blockquote>"The dashboard they built for us is incredible. Real-time data, clean UI, and zero maintenance."</blockquote>
           <div class="testimonial-author">
@@ -1313,7 +1352,7 @@
           </div>
         </div>
 
-        <div class="testimonial-card reveal reveal-delay-3">
+        <div class="testimonial-card reveal-scale reveal-d3">
           <div class="testimonial-stars">★★★★★</div>
           <blockquote>"Professional, fast, and their automation solutions actually work. Highly recommended."</blockquote>
           <div class="testimonial-author">
@@ -1332,7 +1371,7 @@
   <section style="border-top: 1px solid var(--border);">
     <div class="container">
       <div class="section-tag reveal">FAQ</div>
-      <h2 class="section-title reveal reveal-delay-1">Frequently Asked Questions</h2>
+      <h2 class="section-title reveal reveal-d1">Frequently Asked Questions</h2>
 
       <div class="faq-list">
         <div class="faq-item reveal">
@@ -1341,11 +1380,11 @@
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
-            We work with businesses of all sizes — from startups to enterprises — across industries like e-commerce, logistics, finance, healthcare, and more.
+            We work with businesses of all sizes &mdash; from startups to enterprises &mdash; across industries like e-commerce, logistics, finance, healthcare, and more.
           </div>
         </div>
 
-        <div class="faq-item reveal reveal-delay-1">
+        <div class="faq-item reveal reveal-d1">
           <button class="faq-question">
             How long does it take to build an automation solution?
             <span class="icon">+</span>
@@ -1355,7 +1394,7 @@
           </div>
         </div>
 
-        <div class="faq-item reveal reveal-delay-2">
+        <div class="faq-item reveal reveal-d2">
           <button class="faq-question">
             Do I need technical knowledge to manage the systems?
             <span class="icon">+</span>
@@ -1365,7 +1404,7 @@
           </div>
         </div>
 
-        <div class="faq-item reveal reveal-delay-3">
+        <div class="faq-item reveal reveal-d3">
           <button class="faq-question">
             What tools and platforms do you use?
             <span class="icon">+</span>
@@ -1375,7 +1414,7 @@
           </div>
         </div>
 
-        <div class="faq-item reveal reveal-delay-4">
+        <div class="faq-item reveal reveal-d4">
           <button class="faq-question">
             Do you provide support after deployment?
             <span class="icon">+</span>
@@ -1392,13 +1431,13 @@
   <section class="contact-section" id="contact">
     <div class="container">
       <div class="section-tag reveal">Let's Talk</div>
-      <h2 class="section-title reveal reveal-delay-1">Tell Us Your Business Problem</h2>
-      <p class="section-sub reveal reveal-delay-2">
+      <h2 class="section-title reveal reveal-d1">Tell Us Your Business Problem</h2>
+      <p class="section-sub reveal reveal-d2">
         Got a manual process that's eating your time? Let's fix it.
       </p>
 
       <div class="contact-grid">
-        <div class="contact-info reveal">
+        <div class="contact-info reveal-left">
           <h3>Get In Touch</h3>
           <p>
             Fill out the form and we'll get back to you within 24 hours
@@ -1421,7 +1460,7 @@
           </div>
         </div>
 
-        <form id="appointmentForm" class="contact-form reveal reveal-delay-1">
+        <form id="appointmentForm" class="contact-form reveal-right reveal-d1">
           <div class="form-row">
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
@@ -1489,9 +1528,364 @@
   <!-- ===== BACK TO TOP ===== -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
 
-  <!-- ===== JAVASCRIPT ===== -->
+  <!-- ============================================
+       JAVASCRIPT — ALL ANIMATIONS
+  ============================================ -->
   <script>
-    // ---- Mobile Menu ----
+    // ==========================================
+    // 1. CANVAS PARTICLE NETWORK
+    //    (Automation workflow visualization)
+    // ==========================================
+    const canvas = document.getElementById('networkCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let mouseX = -1000, mouseY = -1000;
+    let animId;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Track mouse for interactive connections
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+    document.addEventListener('mouseleave', () => {
+      mouseX = -1000;
+      mouseY = -1000;
+    });
+
+    const PARTICLE_COUNT = 60;
+    const CONNECTION_DIST = 150;
+    const MOUSE_CONNECTION_DIST = 200;
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.radius = Math.random() * 2 + 1.5;
+        this.opacity = Math.random() * 0.5 + 0.3;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        // Wrap around edges
+        if (this.x < -50) this.x = canvas.width + 50;
+        if (this.x > canvas.width + 50) this.x = -50;
+        if (this.y < -50) this.y = canvas.height + 50;
+        if (this.y > canvas.height + 50) this.y = -50;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 229, 229, ${this.opacity})`;
+        ctx.fill();
+      }
+    }
+
+    // Create particles
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push(new Particle());
+    }
+
+    // Data packets — small glowing dots that travel along connections
+    let packets = [];
+    class DataPacket {
+      constructor(from, to) {
+        this.from = from;
+        this.to = to;
+        this.progress = 0;
+        this.speed = 0.008 + Math.random() * 0.012;
+      }
+      update() {
+        this.progress += this.speed;
+        if (this.progress >= 1) {
+          // Reverse direction
+          [this.from, this.to] = [this.to, this.from];
+          this.progress = 0;
+        }
+      }
+      draw() {
+        const x = this.from.x + (this.to.x - this.from.x) * this.progress;
+        const y = this.from.y + (this.to.y - this.from.y) * this.progress;
+        const pulse = Math.sin(this.progress * Math.PI) * 0.8 + 0.2;
+
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 229, 229, ${pulse})`;
+        ctx.fill();
+
+        // Glow
+        ctx.beginPath();
+        ctx.arc(x, y, 8, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 229, 229, ${pulse * 0.2})`;
+        ctx.fill();
+      }
+    }
+
+    // Create initial packets
+    function spawnPackets() {
+      packets = [];
+      for (let i = 0; i < 8; i++) {
+        const a = Math.floor(Math.random() * particles.length);
+        let b = Math.floor(Math.random() * particles.length);
+        while (b === a) b = Math.floor(Math.random() * particles.length);
+        packets.push(new DataPacket(particles[a], particles[b]));
+      }
+    }
+    spawnPackets();
+
+    // Occasionally respawn packets
+    setInterval(() => {
+      if (document.hidden) return;
+      spawnPackets();
+    }, 4000);
+
+    function drawNetwork() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw connections between nearby particles
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < CONNECTION_DIST) {
+            const opacity = (1 - dist / CONNECTION_DIST) * 0.3;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(0, 229, 229, ${opacity})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+
+        // Connect to mouse
+        const dx = particles[i].x - mouseX;
+        const dy = particles[i].y - mouseY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < MOUSE_CONNECTION_DIST) {
+          const opacity = (1 - dist / MOUSE_CONNECTION_DIST) * 0.5;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(mouseX, mouseY);
+          ctx.strokeStyle = `rgba(167, 139, 250, ${opacity})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+
+      // Draw particles
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      // Draw data packets
+      packets.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      animId = requestAnimationFrame(drawNetwork);
+    }
+
+    drawNetwork();
+
+    // Pause canvas when not visible to save CPU
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        cancelAnimationFrame(animId);
+      } else {
+        drawNetwork();
+      }
+    });
+
+    // ==========================================
+    // 2. TYPEWRITER EFFECT
+    // ==========================================
+    (function typewriter() {
+      const el = document.getElementById('typewriter');
+      const phrases = [
+        'Business Operations',
+        'Workflow Pipelines',
+        'Data Dashboards',
+        'Repetitive Tasks',
+        'Everything Manual'
+      ];
+      let phraseIdx = 0;
+      let charIdx = 0;
+      let isDeleting = false;
+      let speed = 80;
+
+      function tick() {
+        const current = phrases[phraseIdx];
+
+        if (!isDeleting) {
+          el.textContent = current.substring(0, charIdx + 1);
+          charIdx++;
+          if (charIdx === current.length) {
+            isDeleting = true;
+            speed = 1200; // pause before deleting
+          } else {
+            speed = 60 + Math.random() * 50;
+          }
+        } else {
+          el.textContent = current.substring(0, charIdx - 1);
+          charIdx--;
+          if (charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            speed = 300;
+          } else {
+            speed = 30 + Math.random() * 30;
+          }
+        }
+
+        setTimeout(tick, speed);
+      }
+
+      tick();
+    })();
+
+    // ==========================================
+    // 3. ANIMATED COUNTERS
+    // ==========================================
+    (function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      if (!counters.length) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.target);
+            const start = 0;
+            const duration = 2000;
+            const startTime = performance.now();
+
+            function update(now) {
+              const elapsed = now - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              // Ease out cubic
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = Math.round(start + (target - start) * eased);
+              el.textContent = current;
+
+              if (progress < 1) {
+                requestAnimationFrame(update);
+              } else {
+                el.textContent = target;
+              }
+            }
+
+            requestAnimationFrame(update);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(c => observer.observe(c));
+    })();
+
+    // ==========================================
+    // 4. CODE BLOCK LINE-BY-LINE REVEAL
+    // ==========================================
+    (function codeReveal() {
+      const block = document.getElementById('codeBlock');
+      if (!block) return;
+      const lines = block.querySelectorAll('.line');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            lines.forEach((line, i) => {
+              setTimeout(() => {
+                line.style.transition = 'opacity 0.4s ease';
+                line.style.opacity = '1';
+              }, i * 180);
+            });
+            observer.unobserve(block);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      // Set initial state
+      lines.forEach(l => { l.style.opacity = '0'; });
+      observer.observe(block);
+    })();
+
+    // ==========================================
+    // 5. PIPELINE ANIMATION (How It Works)
+    // ==========================================
+    (function pipelineAnim() {
+      const fill = document.getElementById('pipelineFill');
+      const dot = document.getElementById('pipelineDot');
+      const section = document.getElementById('processSteps');
+      if (!fill || !dot || !section) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            fill.classList.add('animate');
+            dot.classList.add('animate');
+            observer.unobserve(section);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      observer.observe(section);
+    })();
+
+    // ==========================================
+    // 6. SCROLL REVEAL (Intersection Observer)
+    // ==========================================
+    (function scrollReveal() {
+      const revealEls = document.querySelectorAll('.reveal, .reveal-scale, .reveal-left, .reveal-right');
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      revealEls.forEach(el => observer.observe(el));
+    })();
+
+    // ==========================================
+    // 7. FAQ ACCORDION
+    // ==========================================
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // ==========================================
+    // 8. NAVBAR — Mobile Menu + Scroll
+    // ==========================================
     const toggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
 
@@ -1499,20 +1893,20 @@
       navLinks.classList.toggle('open');
     });
 
-    // Close menu on link click
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
       });
     });
 
-    // ---- Navbar scroll effect ----
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // ---- Back to Top ----
+    // ==========================================
+    // 9. BACK TO TOP
+    // ==========================================
     const backBtn = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
       backBtn.classList.toggle('show', window.scrollY > 500);
@@ -1521,36 +1915,9 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // ---- Scroll Reveal (Intersection Observer) ----
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-    );
-
-    revealEls.forEach(el => observer.observe(el));
-
-    // ---- FAQ Accordion ----
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-
-        // Close all
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-
-        // Toggle current
-        if (!isOpen) item.classList.add('open');
-      });
-    });
-
-    // ---- Form Submission ----
+    // ==========================================
+    // 10. FORM SUBMISSION
+    // ==========================================
     const scriptURL = "https://script.google.com/macros/s/AKfycbwGBgUSd1lroPU8GC69JBAzv7McQZ2lmS1qS0617FgilBvq5XPoNxeCXD3J7_WU9bcV7A/exec";
     const form = document.getElementById('appointmentForm');
     const statusEl = document.getElementById('status');
@@ -1572,7 +1939,7 @@
       statusEl.className = '';
 
       try {
-        const response = await fetch(scriptURL, {
+        await fetch(scriptURL, {
           method: 'POST',
           body: JSON.stringify(formData)
         });
