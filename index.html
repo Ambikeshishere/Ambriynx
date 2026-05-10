@@ -237,7 +237,7 @@
     .tech-stack-grid {
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:16px;
+      gap:12px;
     }
     .tech-stack-item {
       background:var(--bg-card);
@@ -832,6 +832,7 @@
         <!-- Tech Stack Icons -->
         <div class="reveal-right reveal-d1">
           <div class="tech-stack-grid">
+
             <!-- Python -->
             <div class="tech-stack-item">
               <svg viewBox="0 0 64 64" fill="none">
@@ -841,7 +842,74 @@
               <div><h4>Python</h4><span>Data pipelines &amp; analysis</span></div>
             </div>
 
-            <!-- n8n-style (Workflow) -->
+            <!-- Power BI -->
+            <div class="tech-stack-item">
+              <svg viewBox="0 0 64 64" fill="none">
+                <rect x="8" y="28" width="10" height="24" rx="2" fill="#f2c811" opacity=".8"/>
+                <rect x="22" y="18" width="10" height="34" rx="2" fill="#e68619" opacity=".85"/>
+                <rect x="36" y="10" width="10" height="42" rx="2" fill="#d94f04" opacity=".9"/>
+                <rect x="50" y="22" width="8" height="30" rx="2" fill="#b33c00"/>
+                <path d="M13 52v4M27 52v4M41 52v4M54 52v4" stroke="#555" stroke-width="1.5"/>
+                <path d="M4 56h56" stroke="#333" stroke-width="1.5"/>
+              </svg>
+              <div><h4>Power BI</h4><span>Enterprise dashboards &amp; BI</span></div>
+            </div>
+
+            <!-- Tableau -->
+            <div class="tech-stack-item">
+              <svg viewBox="0 0 64 64" fill="none">
+                <circle cx="20" cy="20" r="8" stroke="#e97627" stroke-width="2.5" fill="none"/>
+                <circle cx="44" cy="20" r="8" stroke="#e97627" stroke-width="2.5" fill="none"/>
+                <circle cx="20" cy="44" r="8" stroke="#4a76b8" stroke-width="2.5" fill="none"/>
+                <circle cx="44" cy="44" r="8" stroke="#4a76b8" stroke-width="2.5" fill="none"/>
+                <line x1="28" y1="20" x2="36" y2="20" stroke="#e97627" stroke-width="2"/>
+                <line x1="20" y1="28" x2="20" y2="36" stroke="#e97627" stroke-width="2"/>
+                <line x1="44" y1="28" x2="44" y2="36" stroke="#4a76b8" stroke-width="2"/>
+                <line x1="28" y1="44" x2="36" y2="44" stroke="#4a76b8" stroke-width="2"/>
+                <line x1="20" y1="20" x2="44" y2="44" stroke="#555" stroke-width="1" stroke-dasharray="3,3"/>
+                <line x1="44" y1="20" x2="20" y2="44" stroke="#555" stroke-width="1" stroke-dasharray="3,3"/>
+              </svg>
+              <div><h4>Tableau</h4><span>Data visualization &amp; analytics</span></div>
+            </div>
+
+            <!-- PostgreSQL -->
+            <div class="tech-stack-item">
+              <svg viewBox="0 0 64 64" fill="none">
+                <path d="M48 12c0 0 12-2 14 6 1 4-3 28-6 36-2 5-6 8-10 8-6 0-8-4-10-8l-4-14" stroke="#336791" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M44 14c0 0-8-4-12 2-2 3-4 14-4 18" stroke="#336791" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M30 44c-2 8-4 14-8 16-3 2-6 1-8-1-3-3-2-8 1-10s7-2 8 2" stroke="#336791" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path d="M34 8c0 0 0-5-3-5s-4 4-3 7" stroke="#336791" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <circle cx="34" cy="5" r="2.5" fill="#ffd700"/>
+                <circle cx="28" cy="40" r="3" fill="#336791" opacity=".3"/>
+              </svg>
+              <div><h4>PostgreSQL</h4><span>Relational data warehousing</span></div>
+            </div>
+
+            <!-- MongoDB -->
+            <div class="tech-stack-item">
+              <svg viewBox="0 0 64 64" fill="none">
+                <path d="M32 6c0 0 4 8 4 16s-4 14-4 14-4-6-4-14 4-16 4-16z" fill="#47a248" opacity=".8"/>
+                <path d="M32 36c0 0 6-4 8-10 2-5-2-14-4-18" stroke="#47a248" stroke-width="2" fill="none" opacity=".6"/>
+                <path d="M32 36c0 0-6-4-8-10-2-5 2-14 4-18" stroke="#47a248" stroke-width="2" fill="none" opacity=".6"/>
+                <path d="M30 44c0 0-2 6-4 8-1 1-3 2-3 2s1-4 2-6c1-2 3-4 5-4z" fill="#47a248" opacity=".5"/>
+              </svg>
+              <div><h4>MongoDB</h4><span>NoSQL &amp; document stores</span></div>
+            </div>
+
+            <!-- Excel / Google Sheets -->
+            <div class="tech-stack-item">
+              <svg viewBox="0 0 64 64" fill="none">
+                <rect x="8" y="6" width="48" height="52" rx="4" stroke="#21a366" stroke-width="2.5" fill="none"/>
+                <path d="M8 20h48M8 34h48M8 46h48" stroke="#21a366" stroke-width="1.5" opacity=".4"/>
+                <text x="18" y="18" font-size="10" fill="#21a366" font-weight="800" font-family="sans-serif">SUM</text>
+                <rect x="14" y="24" width="12" height="6" rx="1" fill="#21a366" opacity=".3"/>
+                <rect x="30" y="24" width="12" height="6" rx="1" fill="#21a366" opacity=".3"/>
+                <rect x="14" y="38" width="16" height="6" rx="1" fill="#f59e0b" opacity=".3"/>
+              </svg>
+              <div><h4>Excel / Sheets</h4><span>Spreadsheet analytics</span></div>
+            </div>
+
+            <!-- n8n / Make (Workflow) -->
             <div class="tech-stack-item">
               <svg viewBox="0 0 64 64" fill="none">
                 <circle cx="12" cy="32" r="8" stroke="#00e5e5" stroke-width="3" fill="none"/>
@@ -852,19 +920,26 @@
                 <line x1="18" y1="36" x2="26" y2="48" stroke="#555" stroke-width="2"/>
                 <line x1="38" y1="16" x2="46" y2="28" stroke="#555" stroke-width="2"/>
                 <line x1="38" y1="48" x2="46" y2="36" stroke="#555" stroke-width="2"/>
-                <circle cx="26" cy="16" r="3" fill="#a78bfa"/>
-                <circle cx="26" cy="48" r="3" fill="#60a5fa"/>
-                <circle cx="38" cy="16" r="3" fill="#00e5e5"/>
-                <circle cx="38" cy="48" r="3" fill="#f59e0b"/>
               </svg>
               <div><h4>n8n / Make</h4><span>Workflow automation</span></div>
             </div>
 
-            <!-- Google Sheets / Looker -->
+            <!-- BigQuery / Cloud -->
             <div class="tech-stack-item">
               <svg viewBox="0 0 64 64" fill="none">
-                <rect x="6" y="10" width="52" height="44" rx="4" stroke="#00e5e5" stroke-width="3" fill="none"/>
-                <line x1="6" y1="24" x2="58" y2="24" stroke="#555" stroke-width="2"/>
+                <path d="M32 4L8 20v24l24 16 24-16V20L32 4z" stroke="#4285f4" stroke-width="2.5" fill="none"/>
+                <path d="M32 20l-12 8v8l12 8 12-8v-8l-12-8z" stroke="#4285f4" stroke-width="2" fill="none" opacity=".6"/>
+                <circle cx="32" cy="28" r="4" fill="#4285f4" opacity=".5"/>
+                <line x1="32" y1="32" x2="32" y2="40" stroke="#4285f4" stroke-width="1.5" opacity=".5"/>
+              </svg>
+              <div><h4>BigQuery</h4><span>Cloud data warehouse</span></div>
+            </div>
+
+            <!-- Looker Studio -->
+            <div class="tech-stack-item">
+              <svg viewBox="0 0 64 64" fill="none">
+                <rect x="6" y="10" width="52" height="44" rx="4" stroke="#00e5e5" stroke-width="2.5" fill="none"/>
+                <line x1="6" y1="24" x2="58" y2="24" stroke="#555" stroke-width="1.5"/>
                 <line x1="20" y1="10" x2="20" y2="54" stroke="#555" stroke-width="1.5"/>
                 <line x1="34" y1="10" x2="34" y2="54" stroke="#555" stroke-width="1.5"/>
                 <line x1="48" y1="10" x2="48" y2="54" stroke="#555" stroke-width="1.5"/>
@@ -876,15 +951,6 @@
               <div><h4>Looker Studio</h4><span>Dashboards &amp; reports</span></div>
             </div>
 
-            <!-- SQL / Database -->
-            <div class="tech-stack-item">
-              <svg viewBox="0 0 64 64" fill="none">
-                <ellipse cx="32" cy="16" rx="22" ry="8" stroke="#a78bfa" stroke-width="2.5" fill="none"/>
-                <path d="M10 16v12c0 4.418 9.85 8 22 8s22-3.582 22-8V16" stroke="#a78bfa" stroke-width="2.5" fill="none"/>
-                <path d="M10 28v12c0 4.418 9.85 8 22 8s22-3.582 22-8V28" stroke="#a78bfa" stroke-width="2.5" fill="none"/>
-              </svg>
-              <div><h4>SQL &amp; Databases</h4><span>Structured data storage</span></div>
-            </div>
           </div>
         </div>
       </div>
