@@ -188,6 +188,30 @@
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
+    /* ===== LIVE REQUEST COUNTER ===== */
+    .hero-proof {
+      display: flex; align-items: center; gap: 16px;
+      margin-top: 32px; padding: 14px 20px;
+      background: rgba(0, 229, 229, 0.04);
+      border: 1px solid rgba(0, 229, 229, 0.15);
+      border-radius: 12px;
+      animation: fadeUp .6s ease-out .5s both;
+    }
+    .proof-badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      padding: 4px 10px; border-radius: 6px;
+      background: rgba(0, 229, 229, 0.12);
+      color: var(--cyan); text-transform: uppercase;
+      flex-shrink: 0; line-height: 1.4;
+    }
+    .proof-count {
+      font-size: 15px; color: var(--text-dim);
+    }
+    .proof-count #requestCount {
+      font-weight: 700; color: var(--text);
+      font-size: 19px;
+    }
+
     /* ===== TECH SHOWCASE (SVG + Python / n8n style) ===== */
     .tech-showcase {
       border-top:1px solid var(--border);
@@ -499,6 +523,10 @@
       .logo img{width:38px;height:38px}
       .hero{padding-top:80px;min-height:auto}
       .hero-pain{gap:10px;margin-top:40px;padding-top:28px}
+      .hero-proof{margin-top:24px;padding:12px 16px;gap:12px}
+      .proof-count{font-size:14px}
+      .proof-count #requestCount{font-size:17px}
+      .proof-badge{font-size:10px;padding:3px 8px}
       .pain-item{padding:12px 14px}
       .pain-item h4{font-size:14px}
       .pain-item p{font-size:12px}
@@ -561,6 +589,9 @@
       .pain-item{padding:10px 12px}
       .pain-item h4{font-size:13px}
       .pain-item p{font-size:11px}
+      .hero-proof{margin-top:20px;padding:10px 14px;gap:10px;flex-wrap:wrap}
+      .proof-count{font-size:13px}
+      .proof-count #requestCount{font-size:15px}
       .about-features .about-feature{padding:12px}
       .about-feature h4{font-size:14px}
       .about-feature p{font-size:13px}
@@ -682,6 +713,14 @@
               <h4>Growth opportunities are slipping through your fingers</h4>
               <p>Making decisions on gut feel instead of hard data</p>
             </div>
+          </div>
+
+          <!-- Live Request Counter (fetched from Google Sheets CSV) -->
+          <div class="hero-proof">
+            <span class="proof-badge">&#128202; LIVE</span>
+            <span class="proof-count">
+              <span id="requestCount">&mdash;</span> business owners have already reached out
+            </span>
           </div>
         </div>
       </div>
@@ -1889,11 +1928,33 @@
         })});
         statusEl.textContent = 'Request submitted! We\'ll call you within 24 hours.';
         statusEl.className = 'success'; form.reset();
+        // Refresh the request counter after successful submission
+        fetchRequestCounter();
       } catch(e) {
         statusEl.textContent = 'Something went wrong. Please call us directly.';
         statusEl.className = 'error';
       }
     });
+
+    // ========================
+    // 11. LIVE REQUEST COUNTER
+    // ========================
+    async function fetchRequestCounter() {
+      const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTKHuHFV1FmdSHMs0-1V5RwqgnAD5pKTNMN5H0waYzan7znJmK2reBJFCkEvoXQveRZa14QEDV8eQsp/pub?output=csv";
+      const el = document.getElementById('requestCount');
+      if (!el) return;
+      try {
+        const res = await fetch(csvUrl);
+        const text = await res.text();
+        const lines = text.trim().split('\n');
+        const count = lines.length > 1 ? lines.length - 1 : 0;
+        el.textContent = count.toLocaleString();
+      } catch(e) {
+        el.textContent = '—';
+      }
+    }
+    // Fetch on page load
+    fetchRequestCounter();
   </script>
 </body>
 </html>
