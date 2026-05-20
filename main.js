@@ -246,10 +246,16 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 // ========================
 const toggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
-toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+const navOverlay = document.getElementById('navOverlay');
+function closeNav() { navLinks.classList.remove('open'); if (navOverlay) navOverlay.classList.remove('show'); }
+function openNav() { navLinks.classList.add('open'); if (navOverlay) navOverlay.classList.add('show'); }
+toggle.addEventListener('click', () => {
+  if (navLinks.classList.contains('open')) closeNav(); else openNav();
 });
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeNav);
+});
+if (navOverlay) navOverlay.addEventListener('click', closeNav);
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
 
