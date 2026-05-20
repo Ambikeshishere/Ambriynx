@@ -41,11 +41,25 @@ Not in a boardroom. Not at a conference.
 
 On the factory floor. At 2 AM. In the silence between two shipments.
 
-Our founder, Ambikesh, sat across from a manufacturer who had been in business for 27 years. The man spread out his ledgers like a doctor laying out X-rays. He said something that has never left us:
+Our founder, Ambikesh, was 22 when he started this.
 
-> *"I have all the data in the world. But nobody has ever sat me down and told me — in my language — what it actually means."*
+No MBA. No family business background. No grey hair from 30 years on the factory floor. Just a laptop, a restless curiosity, and the strange ability to look at a pile of numbers and see the story hiding inside.
 
-That's when it clicked.
+He started by asking a simple question to every business owner he could reach:
+
+> *"Can you show me your numbers? I don't want to sell you anything. I just want to see if I can find something you've missed."*
+
+Most said no. Some said yes.
+
+One of them — a manufacturer who had been running his unit for 27 years — spread out his ledgers like a doctor laying out X-rays. He was skeptical. A 22-year-old telling him about *his* business?
+
+Ambikesh pointed at a product line and said: *"This one. You think it's your best seller. But after returns, discounts, and the raw material spike last quarter — it's actually running at a loss."*
+
+The man checked. He went silent for a long time.
+
+That's when Ambikesh realized: **age doesn't find the truth. Data does.**
+
+He hadn't worked in a factory. But he understood numbers. And numbers, when read right, never lie.
 
 ### The World Doesn't Need Another Dashboard
 
@@ -172,7 +186,7 @@ We're looking for:
 
 Fork the repo. Send a PR. Open an issue. Or just reach out and say hi.
 
-> *"The best time to understand your business was five years ago. The second best time is right now."*
+> *"I'm 22. I haven't run a factory. But I've read enough business data to know that numbers tell the truth — and the truth can fix anything."* — Ambikesh
 
 ---
 
