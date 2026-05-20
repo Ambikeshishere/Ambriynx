@@ -29,10 +29,11 @@
         </div>
       </div>
       <div class="nav-links" id="navLinks">
-        <a href="#services">Services</a>
-        <a href="#tech">Tech Stack</a>
-        <a href="#process">How It Works</a>
-        <a href="#contact" class="nav-cta">Book Appointment</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#tech" data-i18n="nav_tech">Tech Stack</a>
+        <a href="#process" data-i18n="nav_process">How It Works</a>
+        <a href="#contact" class="nav-cta" data-i18n="nav_contact">Book Appointment</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch Language">हि</button>
       </div>
       <button class="menu-toggle" id="menuToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -49,30 +50,30 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="dot"></span>
-          Business Analytics &bull; Data &bull; Growth
+          <span data-i18n="hero_badge">Business Analytics &bull; Data &bull; Growth</span>
         </div>
 
         <h1>
-          Your Business<br />
+          <span data-i18n="hero_title">Your Business</span><br />
           <span class="gradient-text" id="typewriter"></span>
         </h1>
 
-        <p>
+        <p data-i18n="hero_problem">
           <strong>The Problem:</strong> Your factory runs thousands of transactions every month — but you don't know
           which products are actually profitable, where the money is leaking, or why margins are shrinking.
           Your data sits in Excel sheets and ERP reports, but nobody connects the dots.
         </p>
-        <p style="margin-top:12px">
+        <p style="margin-top:12px" data-i18n="hero_solution">
           <strong>Our Solution:</strong> We unify all your data — sales, expenses, P&amp;L, inventory — into one
           live dashboard and tell you <strong>exactly where to focus</strong>. No jargon. No complexity.
           Just clear, actionable intelligence — in the language you're comfortable with.
         </p>
 
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero_btn1">
             Book Free Consultation &rarr;
           </a>
-          <a href="#services" class="btn btn-secondary">
+          <a href="#services" class="btn btn-secondary" data-i18n="hero_btn2">
             View Services
           </a>
         </div>
@@ -81,31 +82,40 @@
           <div class="pain-item">
             <span class="pain-icon">&#9888;</span>
             <div>
-              <h4>You don't know which products are actually profitable</h4>
-              <p>Running blind without data — guessing instead of knowing</p>
+              <h4 data-i18n="pain1_title">You don't know which products are actually profitable</h4>
+              <p data-i18n="pain1_desc">Running blind without data — guessing instead of knowing</p>
             </div>
           </div>
           <div class="pain-item">
             <span class="pain-icon">&#9888;</span>
             <div>
-              <h4>Money comes in and goes out — but where it goes is a mystery</h4>
-              <p>Profit leaks go unnoticed until it's too late</p>
+              <h4 data-i18n="pain2_title">Money comes in and goes out — but where it goes is a mystery</h4>
+              <p data-i18n="pain2_desc">Profit leaks go unnoticed until it's too late</p>
             </div>
           </div>
           <div class="pain-item">
             <span class="pain-icon">&#9888;</span>
             <div>
-              <h4>Growth opportunities are slipping through your fingers</h4>
-              <p>Making decisions on gut feel instead of hard data</p>
+              <h4 data-i18n="pain3_title">Growth opportunities are slipping through your fingers</h4>
+              <p data-i18n="pain3_desc">Making decisions on gut feel instead of hard data</p>
             </div>
           </div>
 
-          <!-- Live Request Counter (fetched from Google Sheets CSV) -->
-          <div class="hero-proof">
-            <span class="proof-badge">&#128202; LIVE</span>
-            <span class="proof-count">
-              <span id="requestCount">&mdash;</span> business owners have already reached out
-            </span>
+          <div class="hero-proof-wrap">
+            <!-- Live Request Counter (fetched from Google Sheets CSV) -->
+            <div class="hero-proof">
+              <span class="proof-badge">&#128202; <span data-i18n="live">LIVE</span></span>
+              <span class="proof-count">
+                <span id="requestCount">&mdash;</span> <span data-i18n="proof_requests">business owners have already reached out</span>
+              </span>
+            </div>
+            <!-- Visitor Counter (compact) -->
+            <div class="hero-proof hero-proof--compact">
+              <span class="proof-badge">&#128065;</span>
+              <span class="proof-count">
+                <span id="visitorCount">—</span> <span data-i18n="proof_visitors">page views</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -115,9 +125,9 @@
   <!-- ===== SERVICES (BA Firm) ===== -->
   <section class="services" id="services">
     <div class="container">
-      <div class="section-tag reveal">What We Offer</div>
-      <h2 class="section-title reveal reveal-d1">Business Analytics — Full Stack</h2>
-      <p class="section-sub reveal reveal-d2">
+      <div class="section-tag reveal" data-i18n="services_tag">What We Offer</div>
+      <h2 class="section-title reveal reveal-d1" data-i18n="services_title">Business Analytics — Full Stack</h2>
+      <p class="section-sub reveal reveal-d2" data-i18n="services_sub">
         From sales analysis to financial intelligence — we cover every aspect of your business.
       </p>
 
@@ -126,96 +136,96 @@
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
           </div>
-          <h3>Sales &amp; Revenue Analytics</h3>
-          <p>Track sales trends, seasonal patterns, product-wise performance, and revenue leakages. Know what's selling and why.</p>
+          <h3 data-i18n="svc1_title">Sales &amp; Revenue Analytics</h3>
+          <p data-i18n="svc1_desc">Track sales trends, seasonal patterns, product-wise performance, and revenue leakages. Know what's selling and why.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d2">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-          <h3>Profit &amp; Loss Intelligence</h3>
-          <p>Deep-dive into costs, margins, overheads, and net profitability. We pinpoint exactly where money is being lost.</p>
+          <h3 data-i18n="svc2_title">Profit &amp; Loss Intelligence</h3>
+          <p data-i18n="svc2_desc">Deep-dive into costs, margins, overheads, and net profitability. We pinpoint exactly where money is being lost.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d3">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
           </div>
-          <h3>Operational Dashboards</h3>
-          <p>Real-time dashboards for production, inventory, dispatch, and workforce — built specifically for industrial units.</p>
+          <h3 data-i18n="svc3_title">Operational Dashboards</h3>
+          <p data-i18n="svc3_desc">Real-time dashboards for production, inventory, dispatch, and workforce — built specifically for industrial units.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d4">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 0 1 9-9"/></svg>
           </div>
-          <h3>Data Integration &amp; Automation</h3>
-          <p>Connect your ERP, billing software, spreadsheets, and bank statements into one unified analytics pipeline.</p>
+          <h3 data-i18n="svc4_title">Data Integration &amp; Automation</h3>
+          <p data-i18n="svc4_desc">Connect your ERP, billing software, spreadsheets, and bank statements into one unified analytics pipeline.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d5">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 16V8"/><path d="M8 16V4"/><path d="M12 16v-4"/><path d="M16 16v-8"/><path d="M20 16v-2"/></svg>
           </div>
-          <h3>Growth Forecasting</h3>
-          <p>Data-backed projections for the next quarter, year, and beyond. Make informed decisions, not gut feelings.</p>
+          <h3 data-i18n="svc5_title">Growth Forecasting</h3>
+          <p data-i18n="svc5_desc">Data-backed projections for the next quarter, year, and beyond. Make informed decisions, not gut feelings.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d5">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3>BA Outsourcing</h3>
-          <p>Dedicated business analyst for your firm — monthly reports, ad-hoc analysis, and strategy calls. Like having an in-house BA team.</p>
+          <h3 data-i18n="svc6_title">BA Outsourcing</h3>
+          <p data-i18n="svc6_desc">Dedicated business analyst for your firm — monthly reports, ad-hoc analysis, and strategy calls. Like having an in-house BA team.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d1">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 12h8"/><path d="M8 16h4"/></svg>
           </div>
-          <h3>GST &amp; Tax Reconciliation</h3>
-          <p>Reconcile your purchases, sales, and tax filings. Catch mismatches, claim missed credits, and stay compliant.</p>
+          <h3 data-i18n="svc7_title">GST &amp; Tax Reconciliation</h3>
+          <p data-i18n="svc7_desc">Reconcile your purchases, sales, and tax filings. Catch mismatches, claim missed credits, and stay compliant.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d2">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><path d="M12 1 8 5l4 4"/><path d="M12 19l-4 4 4 4"/></svg>
           </div>
-          <h3>Bank &amp; Cash Flow Analysis</h3>
-          <p>Track every inflow and outflow. Forecast cash shortages, optimize working capital, and never run dry.</p>
+          <h3 data-i18n="svc8_title">Bank &amp; Cash Flow Analysis</h3>
+          <p data-i18n="svc8_desc">Track every inflow and outflow. Forecast cash shortages, optimize working capital, and never run dry.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d3">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
-          <h3>Inventory Optimization</h3>
-          <p>Analyze stock levels, dead inventory, reorder patterns, and holding costs. Free up cash stuck in inventory.</p>
+          <h3 data-i18n="svc9_title">Inventory Optimization</h3>
+          <p data-i18n="svc9_desc">Analyze stock levels, dead inventory, reorder patterns, and holding costs. Free up cash stuck in inventory.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d4">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/></svg>
           </div>
-          <h3>Vendor &amp; Procurement Analytics</h3>
-          <p>Compare vendor performance, negotiate better rates, and identify procurement savings you didn't know existed.</p>
+          <h3 data-i18n="svc10_title">Vendor &amp; Procurement Analytics</h3>
+          <p data-i18n="svc10_desc">Compare vendor performance, negotiate better rates, and identify procurement savings you didn't know existed.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d5">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           </div>
-          <h3>Pricing &amp; Break-even Analysis</h3>
-          <p>Find the optimal price for every product. Know your break-even point and margin thresholds with confidence.</p>
+          <h3 data-i18n="svc11_title">Pricing &amp; Break-even Analysis</h3>
+          <p data-i18n="svc11_desc">Find the optimal price for every product. Know your break-even point and margin thresholds with confidence.</p>
         </div>
 
         <div class="service-card reveal-scale reveal-d1">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 8h10"/><path d="M7 12h6"/></svg>
           </div>
-          <h3>Loan &amp; Finance Application Support</h3>
-          <p>Prepare bank-ready financial statements, projections, and data packs that help you get approved faster.</p>
+          <h3 data-i18n="svc12_title">Loan &amp; Finance Application Support</h3>
+          <p data-i18n="svc12_desc">Prepare bank-ready financial statements, projections, and data packs that help you get approved faster.</p>
         </div>
       </div>
     </div>
@@ -224,9 +234,9 @@
   <!-- ===== TECH SHOWCASE ===== -->
   <section class="tech-showcase" id="tech">
     <div class="container">
-      <div class="section-tag reveal">Tech Stack</div>
-      <h2 class="section-title reveal reveal-d1">Built With Industrial-Grade Tools</h2>
-      <p class="section-sub reveal reveal-d2">
+      <div class="section-tag reveal" data-i18n="tech_tag">Tech Stack</div>
+      <h2 class="section-title reveal reveal-d1" data-i18n="tech_title">Built With Industrial-Grade Tools</h2>
+      <p class="section-sub reveal reveal-d2" data-i18n="tech_sub">
         We use modern data technology to give you enterprise-level analytics without the enterprise-level cost.
       </p>
 
@@ -632,33 +642,33 @@
 
         <!-- About content -->
         <div class="reveal-right reveal-d1">
-          <div class="section-tag">Who We Are</div>
-          <h2 class="section-title">Do You Really Know How Much Your Business Earns Each Month?</h2>
-          <p>
+          <div class="section-tag" data-i18n="about_tag">Who We Are</div>
+          <h2 class="section-title" data-i18n="about_title">Do You Really Know How Much Your Business Earns Each Month?</h2>
+          <p data-i18n="about_intro">
             This is for you if:
           </p>
           <ul class="need-list" style="margin:16px 0 0;padding:0;list-style:none">
             <li style="display:flex;gap:10px;margin-bottom:10px;color:var(--text-dim);font-size:15px">
               <span style="color:var(--cyan);flex-shrink:0">&#9656;</span>
-              You feel profits should be there, but the bank balance doesn't match?
+              <span data-i18n="about_li1">You feel profits should be there, but the bank balance doesn't match?</span>
             </li>
             <li style="display:flex;gap:10px;margin-bottom:10px;color:var(--text-dim);font-size:15px">
               <span style="color:var(--cyan);flex-shrink:0">&#9656;</span>
-              Which product line is losing money — you have no idea?
+              <span data-i18n="about_li2">Which product line is losing money — you have no idea?</span>
             </li>
             <li style="display:flex;gap:10px;margin-bottom:10px;color:var(--text-dim);font-size:15px">
               <span style="color:var(--cyan);flex-shrink:0">&#9656;</span>
-              High turnover every month, but net profit is only 2-3%?
+              <span data-i18n="about_li3">High turnover every month, but net profit is only 2-3%?</span>
             </li>
             <li style="display:flex;gap:10px;margin-bottom:10px;color:var(--text-dim);font-size:15px">
               <span style="color:var(--cyan);flex-shrink:0">&#9656;</span>
-              Expenses feel out of control — no visibility into what's truly needed?
+              <span data-i18n="about_li4">Expenses feel out of control — no visibility into what's truly needed?</span>
             </li>
           </ul>
-          <p style="margin-top:20px">
-            We tell the <strong>complete story</strong> behind your numbers —
+          <p style="margin-top:20px" data-i18n="about_outro">
+            We tell the complete story behind your numbers —
             sales, P&amp;L, costs, trends — in plain language you actually understand.
-            <strong>Where there's a problem, we show the solution</strong>.
+            Where there's a problem, we show the solution.
             All it takes is one call.
           </p>
 
@@ -666,29 +676,29 @@
             <div class="about-feature">
               <div class="check">&#10003;</div>
               <div>
-                <h4>Zero Tech Hassle</h4>
-                <p>We set up everything. You just get reports.</p>
+                <h4 data-i18n="abt_f1_title">Zero Tech Hassle</h4>
+                <p data-i18n="abt_f1_desc">We set up everything. You just get reports.</p>
               </div>
             </div>
             <div class="about-feature">
               <div class="check">&#10003;</div>
               <div>
-                <h4>Plain Language Reports</h4>
-                <p>No jargon. Reports tailored to your preferred language.</p>
+                <h4 data-i18n="abt_f2_title">Plain Language Reports</h4>
+                <p data-i18n="abt_f2_desc">No jargon. Reports tailored to your preferred language.</p>
               </div>
             </div>
             <div class="about-feature">
               <div class="check">&#10003;</div>
               <div>
-                <h4>Global, Affordable</h4>
-                <p>BA services starting at $120/month. Value that pays for itself.</p>
+                <h4 data-i18n="abt_f3_title">Global, Affordable</h4>
+                <p data-i18n="abt_f3_desc">BA services starting at $120/month. Value that pays for itself.</p>
               </div>
             </div>
             <div class="about-feature">
               <div class="check">&#10003;</div>
               <div>
-                <h4>On-Site &amp; Remote</h4>
-                <p>We visit your facility or work fully remote — your choice.</p>
+                <h4 data-i18n="abt_f4_title">On-Site &amp; Remote</h4>
+                <p data-i18n="abt_f4_desc">We visit your facility or work fully remote — your choice.</p>
               </div>
             </div>
           </div>
@@ -700,9 +710,9 @@
   <!-- ===== PROCESS ===== -->
   <section class="process" id="process">
     <div class="container">
-      <div class="section-tag reveal">The Process</div>
-      <h2 class="section-title reveal reveal-d1">From Data to Decisions</h2>
-      <p class="section-sub reveal reveal-d2">
+      <div class="section-tag reveal" data-i18n="process_tag">The Process</div>
+      <h2 class="section-title reveal reveal-d1" data-i18n="process_title">From Data to Decisions</h2>
+      <p class="section-sub reveal reveal-d2" data-i18n="process_sub">
         We make business analytics simple and actionable — in 4 steps.
       </p>
       <div class="process-steps" id="processSteps">
@@ -712,23 +722,23 @@
         </div>
         <div class="process-step reveal reveal-d1">
           <div class="step-number">1</div>
-          <h3>Discovery Call</h3>
-          <p>We understand your business, operations, and data sources — on-site or remote.</p>
+          <h3 data-i18n="proc1_title">Discovery Call</h3>
+          <p data-i18n="proc1_desc">We understand your business, operations, and data sources — on-site or remote.</p>
         </div>
         <div class="process-step reveal reveal-d2">
           <div class="step-number">2</div>
-          <h3>Data Setup</h3>
-          <p>We connect your billing, inventory, and accounting systems into one pipeline.</p>
+          <h3 data-i18n="proc2_title">Data Setup</h3>
+          <p data-i18n="proc2_desc">We connect your billing, inventory, and accounting systems into one pipeline.</p>
         </div>
         <div class="process-step reveal reveal-d3">
           <div class="step-number">3</div>
-          <h3>Analysis</h3>
-          <p>We analyze trends, find anomalies, and build dashboards that make sense.</p>
+          <h3 data-i18n="proc3_title">Analysis</h3>
+          <p data-i18n="proc3_desc">We analyze trends, find anomalies, and build dashboards that make sense.</p>
         </div>
         <div class="process-step reveal reveal-d4">
           <div class="step-number">4</div>
-          <h3>Monthly Reviews</h3>
-          <p>You get plain-language reports and strategy calls every month.</p>
+          <h3 data-i18n="proc4_title">Monthly Reviews</h3>
+          <p data-i18n="proc4_desc">You get plain-language reports and strategy calls every month.</p>
         </div>
       </div>
     </div>
@@ -737,35 +747,35 @@
   <!-- ===== INDUSTRIES WE SERVE ===== -->
   <section class="industries">
     <div class="container">
-      <div class="section-tag reveal">Who Needs This</div>
-      <h2 class="section-title reveal reveal-d1">If You're in Any of These, Let's Talk</h2>
-      <p class="section-sub reveal reveal-d2">
+      <div class="section-tag reveal" data-i18n="ind_tag">Who Needs This</div>
+      <h2 class="section-title reveal reveal-d1" data-i18n="ind_title">If You're in Any of These, Let's Talk</h2>
+      <p class="section-sub reveal reveal-d2" data-i18n="ind_sub">
         Whether you run a ₹2 Cr workshop or a ₹50 Cr factory — data clarity changes everything.
       </p>
       <div class="industries-grid">
         <div class="industry-item reveal-scale reveal-d1">
           <span class="icon">&#9881;</span>
-          <h4>Manufacturing</h4>
+          <h4 data-i18n="ind1">Manufacturing</h4>
         </div>
         <div class="industry-item reveal-scale reveal-d2">
           <span class="icon">&#128666;</span>
-          <h4>Logistics &amp; Distribution</h4>
+          <h4 data-i18n="ind2">Logistics &amp; Distribution</h4>
         </div>
         <div class="industry-item reveal-scale reveal-d3">
           <span class="icon">&#127859;</span>
-          <h4>Food Processing</h4>
+          <h4 data-i18n="ind3">Food Processing</h4>
         </div>
         <div class="industry-item reveal-scale reveal-d4">
           <span class="icon">&#128295;</span>
-          <h4>Workshops &amp; Fabrication</h4>
+          <h4 data-i18n="ind4">Workshops &amp; Fabrication</h4>
         </div>
         <div class="industry-item reveal-scale reveal-d5">
           <span class="icon">&#127970;</span>
-          <h4>Construction Supplies</h4>
+          <h4 data-i18n="ind5">Construction Supplies</h4>
         </div>
         <div class="industry-item reveal-scale reveal-d1">
           <span class="icon">&#128230;</span>
-          <h4>Wholesale &amp; Trading</h4>
+          <h4 data-i18n="ind6">Wholesale &amp; Trading</h4>
         </div>
       </div>
     </div>
@@ -774,90 +784,90 @@
   <!-- ===== TRANSFORMATION / VALUE PROPS ===== -->
   <section style="border-top:1px solid var(--border)">
     <div class="container">
-      <div class="section-tag reveal">The Transformation</div>
-      <h2 class="section-title reveal reveal-d1">Before Ambriyx vs After Ambriyx</h2>
-      <p class="section-sub reveal reveal-d2">
+      <div class="section-tag reveal" data-i18n="trans_tag">The Transformation</div>
+      <h2 class="section-title reveal reveal-d1" data-i18n="trans_title">Before Ambriyx vs After Ambriyx</h2>
+      <p class="section-sub reveal reveal-d2" data-i18n="trans_sub">
         Same business — but now with the power of data. See the difference for yourself.
       </p>
 
       <div class="transform-grid">
         <div class="transform-col reveal-left">
-          <div class="transform-header bad">❌ Before Ambriyx</div>
+          <div class="transform-header bad" data-i18n="trans_bad_head">❌ Before Ambriyx</div>
           <div class="transform-list">
             <div class="transform-item bad">
               <span class="x-icon">&#10007;</span>
               <div>
-                <h4>Running in the dark</h4>
-                <p>No visibility into which products make money and which don't. Everything runs on "rough estimates."</p>
+                <h4 data-i18n="tbad1_title">Running in the dark</h4>
+                <p data-i18n="tbad1_desc">No visibility into which products make money and which don't. Everything runs on "rough estimates."</p>
               </div>
             </div>
             <div class="transform-item bad">
               <span class="x-icon">&#10007;</span>
               <div>
-                <h4>Money disappears without a trace</h4>
-                <p>Crores in turnover, but 2-3% leaks out every month and you can't figure out where.</p>
+                <h4 data-i18n="tbad2_title">Money disappears without a trace</h4>
+                <p data-i18n="tbad2_desc">Crores in turnover, but 2-3% leaks out every month and you can't figure out where.</p>
               </div>
             </div>
             <div class="transform-item bad">
               <span class="x-icon">&#10007;</span>
               <div>
-                <h4>Data is dumped in Excel graveyards</h4>
-                <p>You have the numbers, but they don't tell a story. No insights, no direction.</p>
+                <h4 data-i18n="tbad3_title">Data is dumped in Excel graveyards</h4>
+                <p data-i18n="tbad3_desc">You have the numbers, but they don't tell a story. No insights, no direction.</p>
               </div>
             </div>
             <div class="transform-item bad">
               <span class="x-icon">&#10007;</span>
               <div>
-                <h4>Costs spiral out of control</h4>
-                <p>You only realize you overspent at month-end — by then, the damage is done.</p>
+                <h4 data-i18n="tbad4_title">Costs spiral out of control</h4>
+                <p data-i18n="tbad4_desc">You only realize you overspent at month-end — by then, the damage is done.</p>
               </div>
             </div>
             <div class="transform-item bad">
               <span class="x-icon">&#10007;</span>
               <div>
-                <h4>Growth is just a wish</h4>
-                <p>Without data, your growth strategy is hope. Risks are invisible. Opportunities are missed.</p>
+                <h4 data-i18n="tbad5_title">Growth is just a wish</h4>
+                <p data-i18n="tbad5_desc">Without data, your growth strategy is hope. Risks are invisible. Opportunities are missed.</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="transform-col reveal-right reveal-d1">
-          <div class="transform-header good">✅ After Ambriyx</div>
+          <div class="transform-header good" data-i18n="trans_good_head">✅ After Ambriyx</div>
           <div class="transform-list">
             <div class="transform-item good">
               <span class="check-icon">&#10003;</span>
               <div>
-                <h4>Live dashboard on your phone</h4>
-                <p>Every morning — what sold, what margin, what spent. Everything crystal clear.</p>
+                <h4 data-i18n="tgood1_title">Live dashboard on your phone</h4>
+                <p data-i18n="tgood1_desc">Every morning — what sold, what margin, what spent. Everything crystal clear.</p>
               </div>
             </div>
             <div class="transform-item good">
               <span class="check-icon">&#10003;</span>
               <div>
-                <h4>Every rupee is tracked</h4>
-                <p>Revenue, cost, profit — by product, by customer, by month. Nothing hidden.</p>
+                <h4 data-i18n="tgood2_title">Every rupee is tracked</h4>
+                <p data-i18n="tgood2_desc">Revenue, cost, profit — by product, by customer, by month. Nothing hidden.</p>
               </div>
             </div>
             <div class="transform-item good">
               <span class="check-icon">&#10003;</span>
               <div>
-                <h4>One page tells the whole story</h4>
-                <p>Numbers speak — trends visible, anomalies highlighted, action items clear.</p>
+                <h4 data-i18n="tgood3_title">One page tells the whole story</h4>
+                <p data-i18n="tgood3_desc">Numbers speak — trends visible, anomalies highlighted, action items clear.</p>
               </div>
             </div>
             <div class="transform-item good">
               <span class="check-icon">&#10003;</span>
               <div>
-                <h4>Real-time cost alerts</h4>
-                <p>The moment a cost spikes, you get notified. Take action before it's too late.</p>
+                <h4 data-i18n="tgood4_title">Real-time cost alerts</h4>
+                <p data-i18n="tgood4_desc">The moment a cost spikes, you get notified. Take action before it's too late.</p>
               </div>
             </div>
             <div class="transform-item good">
               <span class="check-icon">&#10003;</span>
               <div>
-                <h4>Data-backed growth roadmap</h4>
-                <p>Next quarter, next year — planned with data. Risks known. Opportunities mapped.</p>
+                <h4 data-i18n="tgood5_title">Data-backed growth roadmap</h4>
+                <p data-i18n="tgood5_desc">Next quarter, next year — planned with data. Risks known. Opportunities mapped.</p>
               </div>
             </div>
           </div>
@@ -869,51 +879,51 @@
   <!-- ===== FAQ ===== -->
   <section style="border-top:1px solid var(--border)">
     <div class="container">
-      <div class="section-tag reveal">FAQ</div>
-      <h2 class="section-title reveal reveal-d1">Common Questions</h2>
+      <div class="section-tag reveal" data-i18n="faq_tag">FAQ</div>
+      <h2 class="section-title reveal reveal-d1" data-i18n="faq_title">Common Questions</h2>
       <div class="faq-list">
         <div class="faq-item reveal">
-          <button class="faq-question">
+          <button class="faq-question" data-i18n="faq1_q">
             I'm not tech-savvy. Will I understand the reports?
             <span class="icon">+</span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="faq1_a">
             Absolutely. We don't use jargon. Your reports come in clear, simple language with specific "what to do next" takeaways. We also explain everything in person or over a call.
           </div>
         </div>
         <div class="faq-item reveal reveal-d1">
-          <button class="faq-question">
+          <button class="faq-question" data-i18n="faq2_q">
             What data do you need from me?
             <span class="icon">+</span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="faq2_a">
             Whatever you have — invoices, bank statements, ERP exports, Excel sheets, Google Sheets, or even handwritten records. We organize everything. We work with whatever format your business uses.
           </div>
         </div>
         <div class="faq-item reveal reveal-d2">
-          <button class="faq-question">
+          <button class="faq-question" data-i18n="faq3_q">
             How much does it cost?
             <span class="icon">+</span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="faq3_a">
             Our analytics retainer starts at $120/month which includes monthly reports, a live dashboard, and a monthly strategy call. One-time setup projects start from $300. No hidden costs.
           </div>
         </div>
         <div class="faq-item reveal reveal-d3">
-          <button class="faq-question">
+          <button class="faq-question" data-i18n="faq4_q">
             Do you visit our factory?
             <span class="icon">+</span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="faq4_a">
             Yes, for clients within reachable regions. For international clients, we work fully remote via video calls and screen sharing. Either way, you get the same depth of service.
           </div>
         </div>
         <div class="faq-item reveal reveal-d4">
-          <button class="faq-question">
+          <button class="faq-question" data-i18n="faq5_q">
             Can you integrate with our existing software?
             <span class="icon">+</span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="faq5_a">
             Yes — we work with ERP systems, accounting software (Tally, QuickBooks, Xero, Busy), Excel, Google Sheets, bank portals, e-commerce platforms, and custom databases. If you use something else, we'll find a way to connect it.
           </div>
         </div>
@@ -924,16 +934,16 @@
   <!-- ===== CONTACT ===== -->
   <section class="contact-section" id="contact">
     <div class="container">
-      <div class="section-tag reveal">Book Appointment</div>
-      <h2 class="section-title reveal reveal-d1">Let's Look at Your Numbers</h2>
-      <p class="section-sub reveal reveal-d2">
+      <div class="section-tag reveal" data-i18n="contact_tag">Book Appointment</div>
+      <h2 class="section-title reveal reveal-d1" data-i18n="contact_title">Let's Look at Your Numbers</h2>
+      <p class="section-sub reveal reveal-d2" data-i18n="contact_sub">
         Free discovery call. No commitment. Just honest advice on how we can help.
       </p>
       <div class="contact-grid">
         <div class="contact-info reveal-left">
-          <h3>Get In Touch</h3>
-          <p>
-            Fill the form and we'll call you within <strong>24 hours</strong> to schedule
+          <h3 data-i18n="contact_h3">Get In Touch</h3>
+          <p data-i18n="contact_p">
+            Fill the form and we'll call you within 24 hours to schedule
             a free 30-minute discovery call. We'll discuss your business and show you
             what's possible.
           </p>
@@ -955,11 +965,11 @@
           </a>
           <div class="contact-info-item">
             <div class="icon-box">&#9881;</div>
-            <span>Response within 24 hours</span>
+            <span data-i18n="contact_response">Response within 24 hours</span>
           </div>
           <div class="contact-info-item">
             <div class="icon-box">&#127968;</div>
-            <span>On-site &amp; remote — worldwide</span>
+            <span data-i18n="contact_onsite">On-site &amp; remote — worldwide</span>
           </div>
         </div>
 
@@ -987,7 +997,7 @@
             <option>Not Sure — Need Advice</option>
           </select>
           <textarea name="task" rows="4" placeholder="Tell us about your business and what you want to understand better..." required></textarea>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary" data-i18n="form_btn">
             Book Free Discovery Call &rarr;
           </button>
           <div id="status"></div>
@@ -1002,7 +1012,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <h3>AMBRIYX</h3>
-          <span>Business Analytics &amp; Industrial Intelligence</span>
+          <span data-i18n="footer_tagline">Business Analytics &amp; Industrial Intelligence</span>
         </div>
         <div class="footer-social">
           <a href="tel:+919129451978" aria-label="Phone">&#9742;</a>
@@ -1012,16 +1022,38 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Ambriyx. Data-driven decisions for businesses worldwide.</span>
-        <span>Analytics &bull; Intelligence &bull; Growth</span>
+        <span data-i18n="footer_copy">&copy; 2026 Ambriyx. Data-driven decisions for businesses worldwide.</span>
+        <span data-i18n="footer_tag">Analytics &bull; Intelligence &bull; Growth</span>
       </div>
     </div>
   </footer>
 
   <!-- ===== BOOK APPOINTMENT FAB ===== -->
   <button class="appointment-fab" id="appointmentFab">
-    &#128197; Book Appointment
+    &#128197; <span data-i18n="fab_text">Book Appointment</span>
   </button>
+
+  <!-- ===== CHATBOT ===== -->
+  <div class="chatbot" id="chatbot">
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Toggle Chat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/></svg>
+    </button>
+    <div class="chatbot-window" id="chatbotWindow">
+      <div class="chatbot-header">
+        <span>Ambriyx Assistant</span>
+        <button id="chatbotClose">&times;</button>
+      </div>
+      <div class="chatbot-body" id="chatbotBody">
+        <div class="chat-msg bot">
+          Hi! I'm the Ambriyx assistant. Ask me anything about our business analytics services!
+        </div>
+      </div>
+      <div class="chatbot-footer">
+        <input type="text" id="chatbotInput" placeholder="Type your question..." />
+        <button id="chatbotSend">&#10148;</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== BACK TO TOP ===== -->
   <button class="back-to-top" id="backToTop">&uarr;</button>
