@@ -293,7 +293,26 @@ form.addEventListener('submit', async (e) => {
 });
 
 // ========================
-// 11. LIVE REQUEST COUNTER + VISITOR COUNTER
+// 11. COUNTER ANIMATION UTILITY
+// ========================
+function animateCounter(el, target) {
+  if (!el) return;
+  const start = 0;
+  const duration = 1200;
+  const startTime = performance.now();
+  function tick(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(start + (target - start) * eased);
+    el.textContent = current.toLocaleString();
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+// ========================
+// 12. LIVE REQUEST COUNTER + VISITOR COUNTER
 // ========================
 async function fetchRequestCounter() {
   const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTKHuHFV1FmdSHMs0-1V5RwqgnAD5pKTNMN5H0waYzan7znJmK2reBJFCkEvoXQveRZa14QEDV8eQsp/pub?output=csv";
@@ -304,7 +323,7 @@ async function fetchRequestCounter() {
     const text = await res.text();
     const lines = text.trim().split('\n');
     const count = lines.length > 1 ? lines.length - 1 : 0;
-    el.textContent = count.toLocaleString();
+    animateCounter(el, count);
   } catch(e) {
     el.textContent = '—';
   }
@@ -317,7 +336,7 @@ async function fetchVisitorCount() {
   try {
     const res = await fetch('https://api.countapi.xyz/hit/ambriynx/visitors');
     const data = await res.json();
-    el.textContent = data.value.toLocaleString();
+    animateCounter(el, data.value);
   } catch {
     el.textContent = '—';
   }
@@ -325,7 +344,7 @@ async function fetchVisitorCount() {
 fetchVisitorCount();
 
 // ========================
-// 12. LANGUAGE TOGGLE (EN / HI)
+// 13. LANGUAGE TOGGLE (EN / HI)
 // ========================
 (function langToggle() {
   const translations = {
@@ -627,7 +646,7 @@ fetchVisitorCount();
 })();
 
 // ========================
-// 13. CHATBOT
+// 14. CHATBOT
 // ========================
 (function chatbot() {
   const toggle = document.getElementById('chatbotToggle');
