@@ -13,82 +13,98 @@
 
 ---
 
-## 🌃 The Late Night Truth
+## 🌃 The Man Who Reads Numbers Like You Read a Face
 
-You're sitting in your office. It's past midnight.
+Let me tell you about Ambikesh.
 
-The factory floor went silent hours ago. The machines that roared all day are resting. Your workers have gone home. The night guard's footsteps echo somewhere in the yard.
+Twenty-two years old. No MBA. Never managed a factory. Never filed a GST return. Never sat in a boardroom.
 
-And you're still here.
+But give him your raw data — your sales sheets, your purchase registers, your bank statements, your dusty ledgers — and he will tell you things about your business that *you* don't even know.
 
-Because again this month — the numbers don't add up.
+Not because he's a genius. Because he's got something more dangerous:
 
-Your turnover looks good on paper. Crores coming in. Trucks going out. Orders piling up. On paper, things are beautiful.
-
-But then you open your bank statement and something twists inside you.
-
-*Where did it all go?*
-
-You scroll through Excel sheets that no one fully understands. You flip through invoices that seem to multiply on their own. You stare at Profit & Loss reports that feel like a foreign language — written by someone who doesn't know your business, doesn't know your struggle, doesn't know the sweat that goes into every single unit you ship.
-
-Your father ran this business with instinct. You're running it with Excel. And somehow, both feel like you're running blind.
+**Fresh eyes.**
 
 ---
 
-That night — that exact feeling of sitting alone with numbers that refuse to tell the truth — is where Ambriyx was born.
+### The First Time
 
-Not in a boardroom. Not at a conference.
+A year ago, a manufacturer in Ludhiana agreed to meet him. Thirty years in business. Two factories. Crores in turnover. He'd seen everything —booms, recessions, raw material crises, the GST shock.
 
-On the factory floor. At 2 AM. In the silence between two shipments.
+He sat across from this kid and said, with a half-smile: *"Beta, my CA handles the numbers. My son handles the computer. What are you going to tell me that they can't?"*
 
-Our founder, Ambikesh, was 22 when he started this.
+Ambikesh didn't flinch. He asked for one thing: the sales data for the last 12 months.
 
-No MBA. No family business background. No grey hair from 30 years on the factory floor. Just a laptop, a restless curiosity, and the strange ability to look at a pile of numbers and see the story hiding inside.
+The manufacturer pulled it out — 47 Excel sheets, unsorted, raw, the way it comes off the billing machine. No one had ever really *looked* at it. They just filed it.
 
-He started by asking a simple question to every business owner he could reach:
+Ambikesh spent 20 minutes scrolling. Then he looked up and said:
 
-> *"Can you show me your numbers? I don't want to sell you anything. I just want to see if I can find something you've missed."*
+> *"Sir, you have 14 products. But only 3 are making money."*
 
-Most said no. Some said yes.
+The manufacturer laughed. *"Beta, my top 5 products are my bread and butter. I've been selling them for 20 years."*
 
-One of them — a manufacturer who had been running his unit for 27 years — spread out his ledgers like a doctor laying out X-rays. He was skeptical. A 22-year-old telling him about *his* business?
+Ambikesh turned the laptop toward him. Pointed at the numbers. Row by row. Month by month.
 
-Ambikesh pointed at a product line and said: *"This one. You think it's your best seller. But after returns, discounts, and the raw material spike last quarter — it's actually running at a loss."*
+*"Product A — you're selling it at ₹95 per unit. But the raw material cost went up 18% in March. You never revised the price. Every unit you sell now, you're losing ₹3. And you've sold 12,000 units since then."*
 
-The man checked. He went silent for a long time.
+*"Product B — your biggest seller. But the return rate is 23%. Do you know that? Every fourth piece comes back. And you're not charging the return logistics to the customer. That's ₹4.7 lakh this year alone."*
 
-That's when Ambikesh realized: **age doesn't find the truth. Data does.**
+*"Product C, D, E — you're paying your distributor 7% commission. But they're selling to a sub-distributor who marks it up 12%. You could cut the middleman and pocket that margin yourself. But you never tracked the chain."*
 
-He hadn't worked in a factory. But he understood numbers. And numbers, when read right, never lie.
+The manufacturer stopped smiling.
 
-### The World Doesn't Need Another Dashboard
+He called his CA. The CA checked. He called his son. The son checked.
 
-There are a thousand tools that can draw charts. Power BI, Tableau, Looker — they're all brilliant. They can turn numbers into rainbows.
+All of it was true.
 
-But none of them can sit across from you and say:
+The man sat back in his chair. Looked at Ambikesh like he was seeing him for the first time. Then he said something that Ambikesh will never forget:
 
-> *"This product line is killing your margin. This customer hasn't paid in 74 days. This expense category has doubled without you noticing. And here — right here — is ₹12 lakh leaking every quarter from a place you never thought to look."*
-
-That's what we do.
-
-We don't just give you a dashboard. We give you a **truth-teller**. Someone who speaks your language — Hindi, English, Gujarati, or the language of profit & loss. Someone who treats your business like it's their own.
-
-**We sit with you. We look at every number. And we tell you exactly what's happening, what's bleeding, and what to do about it.**
-
-No jargon. No complexity. Just clarity.
+> *"My CA has been with me for 12 years. My son has been handling sales for 4 years. But you — in 20 minutes — you found more than all of them combined."*
 
 ---
 
-### What Your Business Deserves
+### Why?
 
-You've built something real. You've employed families. You've kept machines running through power cuts, market crashes, and pandemics.
+Because **the CA was too busy**. Because **the son was too close**. Because when you're inside a business every single day, you stop seeing the numbers. You see what you *expect* to see.
 
-You deserve to know:
+Ambikesh sees what's *actually* there.
 
-- **Which products actually make money** — and which ones are quietly draining you
-- **Where every single rupee goes** — because small leaks sink big ships
-- **Exactly how much profit you really made** — not what the GST filing says, but the real number
-- **Where your next growth opportunity hides** — because data doesn't lie, it points
+He has no assumptions about your business. No ego about which product he *thinks* should be profitable. No loyalty to the way things have always been done.
+
+He just reads the data. And the data doesn't care about your feelings.
+
+**It just tells the truth.**
+
+---
+
+### What He Can Find In Your Numbers
+
+- **Which products are really bleeding you** — because the ones that *look* like bestsellers are often the ones quietly draining your margin
+- **Where money is stuck** — in dead inventory, late payments, wrong pricing, double-commission structures, unclaimed GST credits
+- **Exactly what your real profit is** — not the number on your P&L, but the truth after returns, after hidden costs, after the small leaks you've normalized over years
+- **What your next move should be** — which product line to drop, which to push, where to renegotiate, where to expand
+
+Not guesses. Not "industry benchmarks."
+
+**Your numbers. Your truth. Your next step.**
+
+---
+
+### The Unfair Advantage
+
+Ambikesh is 22. He hasn't run a factory. He hasn't filed a return. He hasn't been where you've been.
+
+And that's exactly why you should talk to him.
+
+Because he will walk into your business seeing *nothing* except the data. No preconceived notions. No "this is how it's always been." No 30 years of habit blinding him to what's right in front of his face.
+
+He will open your Excel sheets and find things your CA missed, your managers missed, your son missed — not because they're bad at their jobs, but because **they're too close to see it**.
+
+Fresh eyes see what tired eyes skip.
+
+**That's the Ambriyx difference. A 22-year-old with no experience — and a clean, ruthless, uncomfortable relationship with the truth.**
+
+> *"I don't know your business. But your numbers do. And they're screaming for someone to listen."* — Ambikesh
 
 ---
 
