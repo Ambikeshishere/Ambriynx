@@ -4,152 +4,186 @@
   <p><strong>Business Analytics &bull; Industrial Intelligence &bull; Data-Driven Growth</strong></p>
   <br />
   <p>
-    <a href="#-the-story">The Story</a> &bull;
+    <a href="#-the-late-night-truth">The Late Night Truth</a> &bull;
     <a href="#-what-we-do">What We Do</a> &bull;
-    <a href="#-how-this-site-is-built">How This Site Is Built</a> &bull;
-    <a href="#-join-us">Join Us</a>
+    <a href="#-how-this-site-is-built">The Build</a> &bull;
+    <a href="#-join-us">Come, Sit With Us</a>
   </p>
 </div>
 
 ---
 
-## 🌌 The Story
+## 🌃 The Late Night Truth
 
-It was 2 AM in a small industrial town. A factory owner sat at his desk surrounded by dusty ledgers, scattered invoices, and half-filled Excel sheets. He knew his business was making money — the machines ran 20 hours a day, trucks loaded shipments around the clock, and his workforce never sat idle.
+You're sitting in your office. It's past midnight.
 
-But at the end of every month, the bank told a different story.
+The factory floor went silent hours ago. The machines that roared all day are resting. Your workers have gone home. The night guard's footsteps echo somewhere in the yard.
 
-*Where did the money go?*
+And you're still here.
 
-He had crores in turnover, yet the profit column stared back at him like a stranger. He couldn't tell which product made money and which bled it dry. Expenses felt like a leaky bucket — he kept pouring in, but the level never rose.
+Because again this month — the numbers don't add up.
 
-That night, he didn't need more data. He needed clarity.
+Your turnover looks good on paper. Crores coming in. Trucks going out. Orders piling up. On paper, things are beautiful.
 
-This is the story of every industrial business owner we've ever met. And this is the exact problem **Ambriyx** was built to solve.
+But then you open your bank statement and something twists inside you.
 
-### The Spark
+*Where did it all go?*
 
-Ambriyx started not in a boardroom, but on the factory floor. Our founder, <strong>Ambikesh Srivastava</strong>, spent months talking to manufacturers, workshop owners, distributors, and wholesalers. One thing became painfully clear:
+You scroll through Excel sheets that no one fully understands. You flip through invoices that seem to multiply on their own. You stare at Profit & Loss reports that feel like a foreign language — written by someone who doesn't know your business, doesn't know your struggle, doesn't know the sweat that goes into every single unit you ship.
 
-> *"I have all the data. I just don't know what it means."*
+Your father ran this business with instinct. You're running it with Excel. And somehow, both feel like you're running blind.
 
-That's when we realized: the world doesn't need another analytics tool. It needs someone who can sit down with a business owner, look at their numbers, and say — in plain language — *"Here's what's happening, here's what's leaking, and here's exactly what to do about it."*
+---
 
-That's Ambriyx.
+That night — that exact feeling of sitting alone with numbers that refuse to tell the truth — is where Ambriyx was born.
 
-### The Mission
+Not in a boardroom. Not at a conference.
 
-We exist to **democratize business intelligence** for industrial businesses. Whether you run a ₹2 Cr workshop or a ₹50 Cr factory, you deserve to know:
+On the factory floor. At 2 AM. In the silence between two shipments.
 
-- Which products are truly profitable
-- Where every rupee goes
-- Where you're leaking money
-- Where your next growth opportunity hides
+Our founder, Ambikesh, sat across from a manufacturer who had been in business for 27 years. The man spread out his ledgers like a doctor laying out X-rays. He said something that has never left us:
 
-No jargon. No complexity. Just clear, actionable intelligence — in the language you're most comfortable with.
+> *"I have all the data in the world. But nobody has ever sat me down and told me — in my language — what it actually means."*
+
+That's when it clicked.
+
+### The World Doesn't Need Another Dashboard
+
+There are a thousand tools that can draw charts. Power BI, Tableau, Looker — they're all brilliant. They can turn numbers into rainbows.
+
+But none of them can sit across from you and say:
+
+> *"This product line is killing your margin. This customer hasn't paid in 74 days. This expense category has doubled without you noticing. And here — right here — is ₹12 lakh leaking every quarter from a place you never thought to look."*
+
+That's what we do.
+
+We don't just give you a dashboard. We give you a **truth-teller**. Someone who speaks your language — Hindi, English, Gujarati, or the language of profit & loss. Someone who treats your business like it's their own.
+
+**We sit with you. We look at every number. And we tell you exactly what's happening, what's bleeding, and what to do about it.**
+
+No jargon. No complexity. Just clarity.
+
+---
+
+### What Your Business Deserves
+
+You've built something real. You've employed families. You've kept machines running through power cuts, market crashes, and pandemics.
+
+You deserve to know:
+
+- **Which products actually make money** — and which ones are quietly draining you
+- **Where every single rupee goes** — because small leaks sink big ships
+- **Exactly how much profit you really made** — not what the GST filing says, but the real number
+- **Where your next growth opportunity hides** — because data doesn't lie, it points
 
 ---
 
 ## 🚀 What We Do
 
-| Service | What It Means |
+| Service | What It Really Means |
 |---|---|
-| **Sales & Revenue Analytics** | Know what's selling, when, and why |
-| **Profit & Loss Intelligence** | See exactly where money leaks |
-| **Operational Dashboards** | Live view of your entire business |
-| **Data Integration** | Connect ERP, billing, Excel — all in one place |
-| **Growth Forecasting** | Plan next quarter with confidence |
-| **BA Outsourcing** | Your dedicated business analyst team |
-| **GST & Tax Reconciliation** | Never miss a credit or mismatch |
-| **Cash Flow Analysis** | Never run dry |
-| **Inventory Optimization** | Free cash stuck in stock |
-| **Vendor Analytics** | Negotiate better, buy smarter |
-| **Pricing Strategy** | Find the price that maximizes profit |
-| **Loan Support** | Bank-ready financials, fast approval |
+| **Sales & Revenue Analytics** | Stop guessing. Know what's selling, when, and why — down to the last unit. |
+| **Profit & Loss Intelligence** | See exactly where money enters, where it leaks, and who's stealing your margin (spoiler: it's usually a product, not a person). |
+| **Operational Dashboards** | One screen that tells you everything — production, inventory, dispatch, workforce. Real-time. On your phone. |
+| **Data Integration** | ERP, billing software, Excel sheets, bank statements, handwritten records — we connect it all into one pipeline. |
+| **Growth Forecasting** | Next quarter, next year — planned with data, not hope. |
+| **BA Outsourcing** | Your own dedicated business analyst. Monthly reports. Strategy calls. Like having a CFO without the CFO salary. |
+| **GST & Tax Reconciliation** | Catch mismatches before the notice arrives. Claim credits you didn't know you were missing. |
+| **Cash Flow Analysis** | Never be surprised by a cash crunch again. |
+| **Inventory Optimization** | Free up the lakhs of rupees sitting dead in your warehouse. |
+| **Vendor Analytics** | Know which vendors overcharge, which deliver late, and who deserves more business. |
+| **Pricing Strategy** | Find the price that maximizes both sales and margin — backed by data, not gut feel. |
+| **Loan Support** | Bank-ready financial statements that get you approved faster. |
 
-> 📍 Starting at **$120/month** — includes live dashboard, monthly reports, and strategy calls.
+> 📍 Starting at **$120/month** — includes live dashboard, monthly reports, and a monthly strategy call. No hidden costs. No lock-in.
 
 ---
 
-## 🛠️ How This Site Is Built
+## 🛠️ The Build
 
-This website is a **single-page landing site** built for Ambriyx, hosted on **GitHub Pages**.
+This website is our home on the internet — a single-page landing site, hosted on **GitHub Pages**, built with love and vanilla JavaScript (no frameworks, no bloat).
 
-### Tech Stack
+### What's Under the Hood
 
-| Layer | Technology |
+| Layer | What We Used |
 |---|---|
-| **Markup** | HTML5 |
-| **Styling** | CSS3 (custom properties, flexbox, grid, animations) |
-| **Logic** | Vanilla JavaScript (no frameworks) |
-| **Background** | Canvas API (particle network) |
-| **Fonts** | Google Fonts (Inter, JetBrains Mono) |
-| **Analytics** | CountAPI (visitor counter) |
-| **Form Backend** | Google Apps Script |
+| **Structure** | HTML5 |
+| **Style** | CSS3 — custom properties, glassmorphism, fluid layouts |
+| **Brains** | Pure JavaScript (770+ lines, zero dependencies) |
+| **Canvas** | Custom particle network — those floating dots? That's us. |
+| **Counting** | CountAPI (visitor counter that updates in real time) |
+| **Forms** | Google Apps Script — submissions land straight in Sheets |
+| **Fonts** | Inter + JetBrains Mono from Google Fonts |
 
-### Features
+### What This Site Can Do
 
-- **Live Visitor Counter** — tracks page views via CountAPI
-- **Live Request Counter** — pulls form submission count from Google Sheets
-- **Interactive Chatbot** — answers basic questions, suggests queries, human avatar toggle
-- **Hindi/English Toggle** — full site translation with localStorage persistence
-- **Animated Canvas Background** — subtle particle network with data packet simulation
-- **Dashboard Carousel** — live KPI mockups for financial, operational, workforce & sales data
-- **Scroll Reveal Animations** — IntersectionObserver-powered fade/scale/slide effects
-- **Responsive** — fully mobile-optimized with hamburger menu, overlay, and glassmorphism
-- **Light/Dark Mode** — respects system `prefers-color-scheme`
-- **FAQ Accordion** — interactive Q&A section
-- **Appointment Booking Form** — connects to Google Sheets for lead capture
+- **Live Visitor Counter** — every visit counts. You can see it at the top.
+- **Live Request Counter** — every form submission adds to the number in real time.
+- **Smart Chatbot** — asks you questions, suggests what to ask, and redirects you to Ambikesh when it's out of its depth.
+- **English / Hindi Toggle** — full site translation with one click. It remembers your choice.
+- **System-Aware Theme** — light mode if your system is light, dark mode if it's dark. Feels like it belongs.
+- **Animated Particles** — subtle network visualization that responds to your mouse.
+- **Dashboard Carousel** — see exactly what your dashboard could look like.
+- **Smooth Scroll Reveals** — elements fade and slide as you scroll, powered by IntersectionObserver.
+- **Mobile-First** — hamburger menu, overlay backdrop, touch-friendly everything.
+- **FAQ Accordion** — because the question you have is probably already answered.
+- **Booking Form** — book a free call. We'll call you within 24 hours. Promise.
 
-### Project Structure
+### Project Map
 
 ```
-├── index.html        # Main landing page
-├── styles.css        # All styles (930+ lines)
-├── main.js           # All JavaScript (770+ lines)
-├── logo.png          # Brand logo
-├── opencode.jsonc    # OpenCode config
-└── .github/          # GitHub workflows
+├── index.html        # Everything you see
+├── styles.css        # The skin & soul (930+ lines)
+├── main.js           # The brain (770+ lines)
+├── logo.png          # Our face
+├── opencode.jsonc    # Config
+└── .github/          # Automation
 ```
 
 ---
 
-## 🤝 Join Us
+## 🤝 Come, Sit With Us
 
-Ambriyx is more than a service — it's a movement to make data intelligence accessible to every industrial business, everywhere.
+Ambriyx isn't a company. It's a **promise**.
 
-### 👨‍💼 For Business Owners
+A promise that your business data will finally make sense. That you'll stop feeling like numbers are against you. That someone will sit beside you — literally or virtually — and decode the chaos.
 
-If you're tired of guessing and ready to *know*:
-- 📞 **Call/WhatsApp:** [+91 9129451978](tel:+919129451978)
+### 👨‍💼 If You Own a Business
+
+You've done the hard part. You built something real. Now let us help you see it clearly.
+
+- 📞 **Call / WhatsApp:** [+91 9129451978](tel:+919129451978)
 - 📧 **Email:** [abhay2004raj15@gmail.com](mailto:abhay2004raj15@gmail.com)
 - 📸 **Instagram:** [@Ambikesh.py](https://www.instagram.com/Ambikesh.py)
 - 💼 **LinkedIn:** [Ambikesh Srivastava](https://www.linkedin.com/in/ambikesh-srivastava-2416992a0/)
-- 🌐 **Book a free discovery call** right here on our site — click the green button!
+- 🌐 **Or just hit "Book Appointment" on our site** — the button that glows. You can't miss it.
 
-### 💻 For Developers & Collaborators
+We offer a **free 30-minute discovery call**. No pitch. No pressure. Just honest advice about your numbers.
 
-Want to contribute, build tools, or work with us?
+### 💻 If You're a Builder
 
-- Fork this repo and send PRs
-- Open issues for feature requests or bugs
-- Connect with us on LinkedIn or Instagram
+You believe data can change the world. So do we.
 
-We're always looking for:
-- Data analysts who love industrial data
-- Frontend devs who believe in clean, functional design
-- Storytellers who can turn numbers into narratives
+We're looking for:
+- **Data analysts** who love messy industrial data
+- **Frontend developers** who worship clean, fast design
+- **Storytellers** who can turn pivot tables into poetry
+- **Dreamers** who want to build something that actually matters
+
+Fork the repo. Send a PR. Open an issue. Or just reach out and say hi.
+
+> *"The best time to understand your business was five years ago. The second best time is right now."*
 
 ---
 
 <div align="center">
   <br />
-  <p><strong>Ambriyx</strong> &mdash; Data-driven decisions for businesses worldwide.</p>
+  <p><strong>Ambriyx</strong> &mdash; Data-driven decisions for the people who build the world.</p>
   <p>
     <a href="https://www.instagram.com/Ambikesh.py">Instagram</a> &bull;
     <a href="https://www.linkedin.com/in/ambikesh-srivastava-2416992a0/">LinkedIn</a> &bull;
     <a href="tel:+919129451978">Call Us</a>
   </p>
   <br />
-  <sub>&copy; 2026 Ambriyx. Built with ❤️ for the people who build the world.</sub>
+  <sub>&copy; 2026 Ambriyx. Made with late nights, black coffee, and the belief that every business deserves to know its own truth.</sub>
 </div>
