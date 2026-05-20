@@ -252,12 +252,16 @@ function openNav() { navLinks.classList.add('open'); if (navOverlay) navOverlay.
 toggle.addEventListener('click', () => {
   if (navLinks.classList.contains('open')) closeNav(); else openNav();
 });
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', closeNav);
+navLinks.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('click', closeNav);
 });
 if (navOverlay) navOverlay.addEventListener('click', closeNav);
 const navClose = document.getElementById('navClose');
 if (navClose) navClose.addEventListener('click', closeNav);
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeNav(); });
+document.addEventListener('click', (e) => {
+  if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) closeNav();
+});
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
 
